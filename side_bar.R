@@ -69,9 +69,6 @@ sidebar_second_stack <- function(i18n) {
     Nav(
       groups = list(
         list(links = list(
-          list(name = i18n$t('UPLOAD'), url = '#!/t1', key = 'sidebar_main_first', icon = 'SwitcherStartEnd'),
-          list(name = i18n$t('PUBLISH'), url = '#!/t2', key = 'sidebar_main_second', icon = 'Globe'),
-          list(name = i18n$t('STUDY'), url = '#!/t3', key = 'sidebar_main_third', icon = 'Ribbon'),
           list(name = i18n$t('Home'), url = '#!/', key = 'sidebar_first', icon = 'Home'),
           list(name = i18n$t('Demographic and Social'), url = '#!/1', key = 'sidebar_second', icon = 'Group'),
           list(name = i18n$t('Household and Family'), url = '#!/2', key = 'sidebar_third', icon = 'Street'),

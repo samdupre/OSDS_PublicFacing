@@ -18,13 +18,13 @@ library(ggplot2)
 #library(patchwork)
 #library(png)
 #library(ggpubr)
-#library(showtext)
+library(showtext)
 #library(gridtext)
 #library(grid)
-#library(scales)
+library(scales)
 #library(broom)
 #library(rmarkdown)
-#library(ggpol)
+library(ggpol)
 
 
 #LOAD THE DATA##################################################################################################################
@@ -34,7 +34,6 @@ imported_migration_data <- readRDS("data/app-data/migration-flows.RDS")
 ADM0_data <- readRDS("data/app-data/ADM0-data.RDS")
 ADM1_data <- readRDS("data/app-data/ADM1-data.RDS")
 ADM2_data <- readRDS("data/app-data/ADM2-data.RDS")
-iso3list <- readRDS("data/iso3codes.RDS")
 
 #Spatial data
 # ADM0 census data
