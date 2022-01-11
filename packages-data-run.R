@@ -6,28 +6,26 @@ library(tidyverse) #reshaping, etc.
 library(glue) #stringing together commands with glue()
 library(leaflet) #create maps
 library(leaflet.extras) #setMapWidgetStyle()
-library(plotly) #create plots
 library(sf) #shapefile processing
-library(DT) #for the data tables. Not used for now, keep if I use DT as originally planned
 library(shiny.i18n) #internationalization
 library(shiny.router) #page control
-library(raster) #GADM shapefile pull, among others
+#library(raster) #GADM shapefile pull, among others
 library(shinyjs) #for JS functionality including the file uploads. Not used for now, but will be once this is transitioned.
 library(htmltools) #for label popups
 library(gghighlight) #for selection highlighting in ggplot
 library(waffle) #for waffleplots. Requires v. 1.0+. If only 0.7.0 installs, use: install.packages("waffle", repos = "https://cinc.rud.is")
 library(ggplot2)
-library(patchwork)
-library(png)
-library(ggpubr)
-library(showtext)
-library(gridtext)
-library(grid)
-library(scales)
-library(broom)
-library(rmarkdown)
-library(ggpol)
-#library(GADMTools) #Used only to update shapefiles, delete if works without with new function
+#library(patchwork)
+#library(png)
+#library(ggpubr)
+#library(showtext)
+#library(gridtext)
+#library(grid)
+#library(scales)
+#library(broom)
+#library(rmarkdown)
+#library(ggpol)
+
 
 #LOAD THE DATA##################################################################################################################
 imported_data <- readRDS("data/app-data/census.RDS")
