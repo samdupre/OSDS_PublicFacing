@@ -15,15 +15,8 @@ library(htmltools) #for label popups
 library(gghighlight) #for selection highlighting in ggplot
 library(waffle) #for waffleplots. Requires v. 1.0+. If only 0.7.0 installs, use: install.packages("waffle", repos = "https://cinc.rud.is")
 library(ggplot2)
-#library(patchwork)
-#library(png)
-#library(ggpubr)
 library(showtext)
-#library(gridtext)
-#library(grid)
 library(scales)
-#library(broom)
-#library(rmarkdown)
 library(ggpol)
 
 
