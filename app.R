@@ -1168,10 +1168,7 @@ server <- function(input, output, session) {
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
                    weight = 6,
                    color = "white",
-                   layerId = "select") %>%
-      setView(lng = mean(st_bbox(sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,])[c(1,3)]),
-              lat = mean(st_bbox(sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,])[c(2,4)]),
-              zoom = 8)
+                   layerId = "select")
   })
   
   # PAGE 2: Household & Family Maps#############################################
