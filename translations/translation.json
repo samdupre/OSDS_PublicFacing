@@ -1,0 +1,2589 @@
+{
+  "languages": ["English", "Spanish"],
+  "translation": [
+      {
+        "English": "A. Agriculture, forestry and fishing",
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Accommodation and food service activities",
+        "Spanish": "Actividades de alojamiento y servicio de comidas"
+      },
+      {
+        "English": "Activities of extraterritorial organizations and bodies",
+        "Spanish": "Actividades de organizaciones extraterritoriales"
+      },
+      {
+        "English": "Activities of households as employers; undifferentiated goods and\nservices-producing activities of households for own use",
+        "Spanish": "Actividades de los hogares como empleadores; actividades indiferenciadas de producción de bienes y\nservicios de los hogares para uso propio"
+      },
+      {
+        "English": "ADM1 (Department)", 
+        "Spanish": "ADM1 (Departamento)"
+      },
+      {
+        "English": "ADM1 (Department) Batch Reports", 
+        "Spanish": "ADM1 (Departamento) Informes por lotes"
+      },
+      {
+        "English": "ADM0 (National)", 
+        "Spanish": "ADM0 (Nacional)"
+      },
+      {
+        "English": "ADM0 Shapefile", 
+        "Spanish": "Shapefile ADM0"
+      },
+      {
+        "English": "ADM1 Shapefile", 
+        "Spanish": "Shapefile ADM1"
+      },
+      {
+        "English": "ADM2 Shapefile", 
+        "Spanish": "Shapefile ADM2"
+      },
+      {
+        "English": "Administrative and support service activities",
+        "Spanish": "Actividades de servicios administrativos y de apoyo"
+      },
+      {
+        "English": "Adult Literacy", 
+        "Spanish": "Alfabetización de Adultos"
+      },
+      {
+        "English": "Adult Literacy Rate", 
+        "Spanish": "Tasa de Alfabetización de Adultos"
+      },
+      {
+        "English": "Adult Literacy Rate by Department, Guatemala 2018", 
+        "Spanish": "Tasa de Alfabetización de Adultos por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Adult Literacy Rate (Percent)", 
+        "Spanish": "Tasa de Alfabetización (Porcentaje)"
+      },
+      {
+        "English": "Age_Sex", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "Agriculture, forestry and fishing",
+        "Spanish": "La agricultura, la silvicultura y la pesca"
+      },
+      {
+        "English": "All Areas", 
+        "Spanish": "Todas las Areas"
+      },
+      {
+        "English": "All rights reserved", 
+        "Spanish": "Reservados todos los derechos"
+      },
+      {
+        "English": "Amenity:", 
+        "Spanish": "Comodidades:"
+      },
+      {
+        "English": "ANALYTICS", 
+        "Spanish": "ANALIZAR"
+      },
+      {
+        "English": "Animal dung", 
+        "Spanish": "Estiércol animal"
+      },
+      {
+        "English": "Annual Deaths", 
+        "Spanish": "Muertes Anuales"
+      },
+      {
+        "English": "Annual deaths per 1,000 people", 
+        "Spanish": "Muertes anuales por cada 1,000 personas"
+      },
+      {
+        "English": "Annual Deaths per 1,000 People", 
+        "Spanish": "Muertes Anuales por cada 1,000 Personas"
+      },
+      {
+        "English": "Annual Live Births", 
+        "Spanish": "Nacimientos Vivos Anuales"
+      },
+      {
+        "English": "Annual Live Births per 1,000 People", 
+        "Spanish": "Nacimientos Vivos Anuales por cada 1,000 Personas"
+      },
+      {
+        "English": "Annual live births per 1,000 people", 
+        "Spanish": "Nacimientos vivos anuales por cada 1,000 personas"
+      },
+      {
+        "English": "Armed Forces", 
+        "Spanish": "Fuerzas Armadas"
+      },
+      {
+        "English": "ArrivalYear", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "Arts, entertainment and recreation",
+        "Spanish": "Arte, entretenimiento y recreación"
+      },
+      {
+        "English": "At least some difficulty in any domain*:", 
+        "Spanish": "Al menos alguna dificultad en cualquier dominio*:"
+      },
+      {
+        "English": "Average Household Size",
+        "Spanish": "Tamaño Promedio del Hogar"
+      },
+      {
+        "English": "Average Household Size by Department, Guatemala 2018",
+        "Spanish": "Tamaño Promedio del Hogar por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Average Household Size by Municipality, Guatemala 2018",
+        "Spanish": "Tamaño Promedio del Hogar por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Average Length of Stay, Population Foreign\nBorn by Department, Guatemala 2018", 
+        "Spanish": "Duración Promedio la Estancia, Población \nExtranjera Nacido por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Average Length of Stay, Population with\nForeign Citizenship by Department, Guatemala 2018", 
+        "Spanish": "Duración Promedio de Estancia, Población de\nCiudadanía Extranjera por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Average People per Housing Unit Room", 
+        "Spanish": "Personas Promedio por Habitación por\nUnidad de Vivienda"
+      },
+      {
+        "English": "Average People per Housing Unit Room by\nDepartment, Guatemala 2018", 
+        "Spanish": "Personas Promedio por Habitación por Unidad\nde Vivienda por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Average People per Room", 
+        "Spanish": "Personas Promedio por Habitación"
+      },
+      {
+        "English": "Average Rooms per Housing Unit", 
+        "Spanish": "Promedio de Habitaciones por Unidad de Vivienda"
+      },
+      {
+        "English": "B. Mining and quarrying", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Bachelor's or equivalent", 
+        "Spanish": "Bachillerato o equivalente"
+      },
+      {
+        "English": "Bamboo", 
+        "Spanish": "Bambú"
+      },
+      {
+        "English": "Births", 
+        "Spanish": "Nacimientos"
+      },
+      {
+        "English": "Burnt clay (bricks, blocks, panels), stone, concrete", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Burnt clay (bricks,\nblocks, panels),\nstone, concrete", 
+        "Spanish": "Arcilla quemada (ladrillos,\nbloques, paneles),\npiedra, hormigón"
+      },
+      {
+        "English": "Building Characteristics", 
+        "Spanish": "Características del edificio"
+      },
+      {
+        "English": "Building Count by Outer Wall Material", 
+        "Spanish": "Cantidad de Edificios por Material de la Pared Exterior"
+      },
+      {
+        "English": "Building Count by Type", 
+        "Spanish": "Cantidad de Edificios por Tipo"
+      },
+      {
+        "English": "Buildings", 
+        "Spanish": "Edificios"
+      },
+      {
+        "English": "Buildings (in thousands)", 
+        "Spanish": "Edificios (en miles)"
+      },
+      {
+        "English": "Buildings containing a single housing unit", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Buildings containing a\nsingle housing unit", 
+        "Spanish": "Edificios que contienen una\nsola unidad de vivienda"
+      },
+      {
+        "English": "Buildings containing more than one housing unit", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Buildings containing more\nthan one housing unit", 
+        "Spanish": "Edificios que contienen más\nde una unidad de vivienda"
+      },
+      {
+        "English": "Buildings for persons living in institutions", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Buildings for persons\nliving in institutions", 
+        "Spanish": "Edificios para personas\nque viven en instituciones"
+      },
+      {
+        "English": "C. Manufacturing",
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Cause",
+        "Spanish": "Causa"
+      },
+      {
+        "English": "Census Data",
+        "Spanish": "Datos Censales"
+      },
+      {
+        "English": "Census Data Archiving and Preservation", 
+        "Spanish": "Archivo y Preservación de Datos Censales"
+      },
+      {
+        "English": "Census Demographic Overview", 
+        "Spanish": "Resumen Demográfico del Censo"
+      },
+      {
+        "English": "Change language", 
+        "Spanish": "Cambiar el idioma"
+      },
+      {
+        "English": "Charcoal", 
+        "Spanish": "Carboncillo"
+      },
+      {
+        "English": "Child",
+        "Spanish": "Hijo"
+      },
+      {
+        "English": "Child Mortality Rate", 
+        "Spanish": "Tasa de Mortalidad Infantil"
+      },
+      {
+        "English": "Classification and Delineation of Urban Areas in a Census", 
+        "Spanish": "Clasificación y Delimitación de Áreas Urbanas en un Censo"
+      },
+      {
+        "English": "Clerical support\nworkers", 
+        "Spanish": "Trabajadores de apoyo\nadministrativo"
+      },
+      {
+        "English": "Coal", 
+        "Spanish": "Carbón"
+      },
+      {
+        "English": "Coding Write-In Responses in a Census", 
+        "Spanish": "Codificación de Respuestas Escritas en un Censo"
+      },
+      {
+        "English": "Cognition", 
+        "Spanish": "Cognición"
+      },
+      {
+        "English": "Collective dwellings", 
+        "Spanish": "Viviendas colectivas"
+      },
+      {
+        "English": "Collective living quarters", 
+        "Spanish": "Viviendas colectivas"
+      },
+      {
+        "English": "Communication", 
+        "Spanish": "Comunicación"
+      },
+      {
+        "English": "Communicating with Census Data: Data Visualization", 
+        "Spanish": "Comunicación con los Datos del Censo: Visualización de Datos"
+      },
+      {
+        "English": "Communicating with Census Data: Storytelling", 
+        "Spanish": "Comunicación con los Datos del Censo: Narración de Historias"
+      },
+      {
+        "English": "Composite household",
+        "Spanish": "Hogar compuesto"
+      },
+      {
+        "English": "Construction",
+        "Spanish": "Construcción"
+      },
+      {
+        "English": "Contributing family\nworkers", 
+        "Spanish": "Trabajadores familiares\ncontribuyentes"
+      },
+      {
+        "English": "Contributing family workers", 
+        "Spanish": "Trabajadores familiares contribuyentes"
+      },
+      {
+        "English": "Controls", 
+        "Spanish": "Controles"
+      },
+      {
+        "English": "Conventional Dwelling Count by Occupancy Status", 
+        "Spanish": "Cantidad de Viviendas Convencionales por Estado de Ocupación"
+      },
+      {
+        "English": "Conventional Dwelling", 
+        "Spanish": "Vivienda Convencional"
+      },
+      {
+        "English": "Conventional Dwellings", 
+        "Spanish": "Viviendas Convencionales"
+      },
+      {
+        "English": "Conventional Dwellings (in hundred thousands)", 
+        "Spanish": "Viviendas Convencionales (en cientos de miles)"
+      },
+      {
+        "English": "Conventional Dwellings (in thousands)", 
+        "Spanish": "Viviendas Convencionales (en miles)"
+      },
+      {
+        "English": "Conventional dwellings", 
+        "Spanish": "Viviendas convencionales"
+      },
+      {
+        "English": "Cooking Fuel", 
+        "Spanish": "Combustible para Cocinar"
+      },
+      {
+        "English": "Corrugated sheets", 
+        "Spanish": "Hojas onduladas"
+      },
+      {
+        "English": "Counting Hard-to-Count Populations", 
+        "Spanish": "Contar Poblaciones Difíciles-de-Contar"
+      },
+      {
+        "English": "Craft and related\ntrade workers", 
+        "Spanish": "Trabajadores artesanales\ny afines"
+      },
+      {
+        "English": "Created in OSDS", 
+        "Spanish": "Creado en OSDS"
+      },
+      {
+        "English": "Crop residues", 
+        "Spanish": "Residuos de cosecha"
+      },
+      {
+        "English": "Crude Birth Rate", 
+        "Spanish": "Tasa Bruta de Natalidad"
+      },
+      {
+        "English": "Crude Birth Rate by Department, Guatemala 2018", 
+        "Spanish": "Tasa Bruta de Natalidad por Departamento"
+      },
+      {
+        "English": "Crude Birth Rate by Municipality, Guatemala 2018", 
+        "Spanish": "Tasa Bruta de Natalidad por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Crude Death Rate", 
+        "Spanish": "Tasa Bruta de Mortalidad"
+      },
+      {
+        "English": "Crude Death Rate by Department, Guatemala 2018", 
+        "Spanish": "Tasa Bruta de Mortalidad por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Crude Death Rate by Municipality, Guatemala 2018", 
+        "Spanish": "Tasa Bruta de Mortalidad por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "D. Electricity, gas, steam and air conditioning supply", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Data Download", 
+        "Spanish": "Descarga de Datos"
+      },
+      {
+        "English": "Data Processing", 
+        "Spanish": "Procesamiento de Datos"
+      },
+      {
+        "English": "Data Upload", 
+        "Spanish": "Subir Datos"
+      },
+      {
+        "English": "deaths", 
+        "Spanish": "muertes"
+      },
+      {
+        "English": "Deaths", 
+        "Spanish": "Muertes"
+      },
+      {
+        "English": "Deaths (in hundreds)", 
+        "Spanish": "Muertes (en cientos)"
+      },
+      {
+        "English": "Deaths (in thousands)", 
+        "Spanish": "Muertes (en miles)"
+      },
+      {
+        "English": "Deaths by Age Category", 
+        "Spanish": "Muertes por Categoría de Edad "
+      },
+      {
+        "English": "Deaths by Cause", 
+        "Spanish": "Muertes por Causa"
+      },
+      {
+        "English": "Demographic and Social", 
+        "Spanish": "Demográfico y Social"
+      },
+      {
+        "English": "Demography and Social Characteristics", 
+        "Spanish": "Demografía y Características Sociales"
+      },
+      {
+        "English": "Department", 
+        "Spanish": "Departamento"       
+      },
+      {
+        "English": "Dependency Ratio, Aged", 
+        "Spanish": "Tasa de Dependencia, Envejecida"
+      },
+      {
+        "English": "Dependency Ratio, Total", 
+        "Spanish": "Tasa de Dependencia, Total"
+      },
+      {
+        "English": "Dependency Ratio, Child", 
+        "Spanish": "Tasa de Dependencia, Juvenil"
+      },
+      {
+        "English": "Developing an Integrated Communications Strategy", 
+        "Spanish": "Desarrollo de una Estrategia de Comunicaciones Integradas"
+      },
+      {
+        "English": "DisabilityRate", 
+        "Spanish": "TasadeDiscapacida"
+      },
+      {
+        "English": "Disability Status", 
+        "Spanish": "Estado de Discapacidad"
+      },
+      {
+        "English": "Divorced",
+        "Spanish": "Divorciado"
+      },
+      {
+        "English": "Doctoral or equivalent", 
+        "Spanish": "Doctorado o equivalente"
+      },
+      {
+        "English": "Domestic Migration", 
+        "Spanish": "Migración Nacional"
+      },
+      {
+        "English": "Domestic Population Flow Mapper, Guatemala 2018", 
+        "Spanish": "Mapeador de Flujo de Población Doméstico, Guatemala 2018"
+      },
+      {
+        "English": "Download",
+        "Spanish": "Descargar"
+      },
+      {
+        "English": "Download Demographic and Social Data",
+        "Spanish": "Descargar Datos Demográficos y Sociales "
+      },
+      {
+        "English": "Download Disability Status Data",
+        "Spanish": "Descargar Datos de Estado de Discapacidad"
+      },
+      {
+        "English": "Download Domestic Migration Data", 
+        "Spanish": "Descargar Datos de Migración Doméstica"
+      },
+      {
+        "English": "Download Education Data", 
+        "Spanish": "Descargar Datos Educativos "
+      },
+      {
+        "English": "Download Fertility Data", 
+        "Spanish": "Descargar Datos de Fertilidad "
+      },
+      {
+        "English": "Download Household and Family Data",
+        "Spanish": "Descargar Datos de Hogares y Familias"
+      },
+      {
+        "English": "Download Housing Data",
+        "Spanish": "Descargar Datos de Vivienda "
+      },
+      {
+        "English": "Download International Migration Data", 
+        "Spanish": "Descargar Datos de Migración Internacional"
+      },
+      {
+        "English": "Download Labour and Economy Data", 
+        "Spanish": "Descargar Datos Laborales y Económicos "
+      },
+      {
+        "English": "Download Mortality Data", 
+        "Spanish": "Descargar Datos de Mortalidad "
+      },
+      {
+        "English": "Download Power and Technology Data",
+        "Spanish": "Descargar Datos de Energía y Tecnología "
+      },
+      {
+        "English": "Download Water, Sanitation and Hygiene Data",
+        "Spanish": "Descargar Datos de Agua, Saneamiento e Higiene "
+      },
+      {
+        "English": "E. Water supply; sewerage, waste management and remediation activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "E-Census Part 1: Planning for Mobile Data Capture", 
+        "Spanish": "E-Censo Parte 1: Planificación de la Captura de Datos Móviles"
+      },
+      {
+        "English": "E-Census Part 2: Developing an Electronic Questionnaire", 
+        "Spanish": "E-Censo Parte 2: Desarrollo de un Cuestionario Electrónico"
+      },
+      {
+        "English": "E-Census Part 3: Timeline Impacts", 
+        "Spanish": "E-Censo Parte 3: Impactos en el Cronograma"
+      },
+      {
+        "English": "Education", 
+        "Spanish": "Educación"
+      },
+      {
+        "English": "Educational Attainment (Highest Education Level Completed)", 
+        "Spanish": "Logro Educativo (Nivel de Educación más Alto Completado) "
+      },
+      {
+        "English": "Electricity", 
+        "Spanish": "Electricidad"
+      },
+      {
+        "English": "Electricity Access (Percent of Households)", 
+        "Spanish": "Acceso a la Electricidad (Porcentaje de Hogares)"
+      },
+      {
+        "English": "Electricity, gas, steam and air conditioning supply",
+        "Spanish": "Suministro de electricidad, gas, vapor y aire acondicionado "
+      },
+      {
+        "English": "Elementary\noccupations", 
+        "Spanish": "Ocupaciones\nelementales"
+      },
+      {
+        "English": "Employed", 
+        "Spanish": "Empleado"
+      },
+      {
+        "English": "Employees", 
+        "Spanish": "Empleados"
+      },
+      {
+        "English": "Employers", 
+        "Spanish": "Empleadores"
+      },
+      {
+        "English": "Employment Status", 
+        "Spanish": "Estado de Empleo"
+      },
+      {
+        "English": "Empties into a piped sewer system", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "Empties into a piped sewer\nsystem", 
+        "Spanish": "Vacía en un sistema de\nalcantarillado entubado"
+      },
+      {
+        "English": "Empties into a piped system connected to an individual sewage disposal system", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "Empties into a piped system\nconnected to an individual\nsewage disposal system", 
+        "Spanish": "Vacía en un sistema de tuberías\nconectado a un sistema individual\nde eliminación de aguas residuales"
+      },
+      {
+        "English": "English", 
+        "Spanish": "Inglés"
+      },
+      {
+        "English": "Explore each subtopic", 
+        "Spanish": "Explorar cada subtema"
+      },
+      {
+        "English": "Explore guidance on census topics", 
+        "Spanish": "Explore la guía sobre temas del censo"
+      },
+      {
+        "English": "Export a dump of all data visualizations included in the public-facing content for all instances of the specified geographic unit. Visualizations are designed to be publication-ready, however each should be reviewed by NSO subject-matter experts and given formal approval prior to release.", 
+        "Spanish": "Exporte un volcado de todas las visualizaciones de datos incluidas en el contenido de cara al público para todas las instancias de la unidad geográfica especificada. Las visualizaciones están diseñadas para estar listas para su publicación; sin embargo, cada una de ellas debe ser revisada por expertos en la materia de la OSN y debe recibir una aprobación formal antes de su publicación."
+      },
+      {
+        "English": "Export data products", 
+        "Spanish": "Exportar productos de datos"
+      },
+      {
+        "English": "Export demographic and social data (in .csv format)",
+        "Spanish": "Exportar datos demográficos y sociales (en formato .csv)"
+      },
+      {
+        "English": "Export domestic migration data (in .csv format)", 
+        "Spanish": "Exportar datos de migración doméstica (en formato .csv)"
+      },
+      {
+        "English": "Export disability status data (in .csv format)",
+        "Spanish": "Exportar datos de estado de discapacidad (en formato .csv)"
+      },
+      {
+        "English": "Export education data (in .csv format)", 
+        "Spanish": "Exportar datos educativos (en formato .csv)"
+      },
+      {
+        "English": "Export fertility data (in .csv format)", 
+        "Spanish": "Exportar datos de fertilidad (en formato .csv)"
+      },
+      {
+        "English": "Export household and family data (in .csv format)",
+        "Spanish": "Exportar datos de hogares y familias (en formato .csv)"
+      },
+      {
+        "English": "Export housing data (in .csv format)",
+        "Spanish": "Exportar datos de vivienda (en formato .csv)"
+      },
+      {
+        "English": "Export international migration data (in .csv format)", 
+        "Spanish": "Exportar datos de migración internacional (en formato .csv)"
+      },
+      {
+        "English": "Export labour and economy data (in .csv format)",
+        "Spanish": "Exportar datos laborales y económicos (en formato .csv)"
+      },
+      {
+        "English": "Export mortality data (in .csv format)",
+        "Spanish": "Exportar datos de mortalidad (en formato .csv)"
+      },
+      {
+        "English": "Export power and technology data (in .csv format)",
+        "Spanish": "Exportar datos de energía y tecnología (en formato .csv)"
+      },
+      {
+        "English": "Export water, sanitation and hygiene data (in .csv format)",
+        "Spanish": "Exportar datos de agua, saneamiento e higiene (en formato .csv)"
+      },      
+      {
+        "English": "Export standardized reports on the selected topics programmatically for all instances of the specified geographic unit. Reports are generated in PDF format. Each report is designed to be publication-ready, however each should be reviewed by NSO subject-matter experts who are familiar with the specific areas and given formal approval prior to release.", 
+        "Spanish": "Exporte informes estandarizados sobre los temas seleccionados de manera programática para todas las instancias de la unidad geográfica especificada. Los informes se generan en formato PDF. Cada informe está diseñado para estar listo para su publicación; sin embargo, cada uno de ellos debe ser revisado por expertos en la materia de la OSN que estén familiarizados con las áreas específicas y que cuenten con una aprobación formal antes de su publicación."
+      },
+      {
+        "English": "Extended household",
+        "Spanish": "Hogar extendido"
+      },
+      {
+        "English": "External", 
+        "Spanish": "Externo"
+      },
+      {
+        "English": "F. Construction",
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Father with one or more unmarried children",
+        "Spanish": "Padre con uno o más hijos solteros"
+      },
+      {
+        "English": "Female", 
+        "Spanish": "Mujeres" 
+      },
+      {
+        "English": "Fertility", 
+        "Spanish": "Fertilidad"
+      },
+      {
+        "English": "Fewer than -10,000", 
+        "Spanish": "Menos de -10,000"
+      },
+      {
+        "English": "Financial and insurance activities",
+        "Spanish": "Actividades financieras y de seguros"
+      },
+      {
+        "English": "Firewood", 
+        "Spanish": "Leña"
+      },
+      {
+        "English": "Fixed bath or shower available\noutside housing unit", 
+        "Spanish": "Baño fijo o ducha disponible en el\nexterior de la unidad de vivienda"
+      },
+      {
+        "English": "Fixed bath or shower available outside housing unit", 
+        "Spanish": "Baño fijo o ducha disponible en el exterior de la unidad de vivienda"
+      },
+      {
+        "English": "Fixed bath or shower available outside\nhousing unit", 
+        "Spanish": "Baño fijo o ducha disponible en el exterior\nde la unidad de vivienda"
+      },
+      {
+        "English": "Fixed-line telephone", 
+        "Spanish": "Teléfono fijo "
+      },
+      {
+        "English": "Foreign Born", 
+        "Spanish": "Nacido en el Extranjero"
+      },
+      {
+        "English": "Foreign Born Population (People)", 
+        "Spanish": "Población Nacida en el Extranjero (Personas)"
+      },
+      {
+        "English": "Foreign Born Population", 
+        "Spanish": "Población Nacida en el Extranjero"
+      },
+      {
+        "English": "Foreign Citizenship", 
+        "Spanish": "Ciudadanía Extranjera"
+      },
+      {
+        "English": "ForeignRate", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "For exclusive use", 
+        "Spanish": "Para uso exclusivo"
+      },
+      {
+        "English": "Formatted, .html document", 
+        "Spanish": "Documento con formato .html"
+      },
+      {
+        "English": "Fuel and Electricity", 
+        "Spanish": "Combustible y Electricidad"
+      },
+      {
+        "English": "G. Wholesale and retail trade; repair of motor vehicles and motorcycles", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Gas", 
+        "Spanish": "Gas"
+      },
+      {
+        "English": "Grandchild or Great Grandchild",
+        "Spanish": "Nieto o Bisnieto"
+      },
+      {
+        "English": "Graphics export", 
+        "Spanish": "Exportación de gráficos"
+      },
+      {
+        "English": "H. Transportation and storage", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Hearing", 
+        "Spanish": "Oyendo"
+      },
+      {
+        "English": "Home", 
+        "Spanish": "Página principal"
+      },
+      {
+        "English": "Household and Family", 
+        "Spanish": "Hogar y Familia"
+      },
+      {
+        "English": "Household and Family Characteristics",
+        "Spanish": "Características del Hogar y la Familia"
+      },
+      {
+        "English": "Household Count by Family Nucleus",
+        "Spanish": "Cantidad de Hogares por Núcleo Familiar"
+      },
+      {
+        "English": "Household Count by ICT Asset Ownership", 
+        "Spanish": "Cantidad de Hogares por Propiedad de Activos de TIC"
+      },
+      {
+        "English": "Household Count by Main Cooking Fuel", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Combustible Principal\npara Cocinar"
+      },
+      {
+        "English": "Household Count by Main Lighting Fuel", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Combustible Principal\npara Iluminación"
+      },
+      {
+        "English": "Household Count by Type",
+        "Spanish": "Cantidad de Hogares por Tipo"
+      },
+      {
+        "English": "Household occupies housing unit partly free of rent", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Household occupies\nhousing unit partly\nfree of rent", 
+        "Spanish": "El hogar ocupa una\nunidad de vivienda parcialmente\nlibre de alquiler"
+      },
+      {
+        "English": "Household occupies housing unit under some other arrangement", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Household occupies\nhousing unit under\nsome other arrangement", 
+        "Spanish": "El hogar ocupa una\nunidad de vivienda\nbajo algún otro arreglo"
+      },
+      {
+        "English": "Household occupies housing unit wholly free of rent", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Household occupies\nhousing unit wholly\nfree of rent", 
+        "Spanish": "El hogar ocupa una\nunidad de vivienda totalmente\nlibre de alquiler"
+      },
+      {
+        "English": "Household owns housing unit", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Household owns\nhousing unit", 
+        "Spanish": "El hogar posee unidad\nde vivienda"
+      },
+      {
+        "English": "Household rents all or a part of housing unit", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Household rents\nall or a part of\nhousing unit", 
+        "Spanish": "El hogar alquila\ntodo o parte de\nla unidad de vivienda"
+      },
+      {
+        "English": "Households", 
+        "Spanish": "Hogares"
+      },
+      {
+        "English": "Households (Percent)", 
+        "Spanish": "Hogares (Porcentaje)"
+      },
+      {
+        "English": "Households (in ten thousands)", 
+        "Spanish": "Hogares (en decenas de miles)"
+      },
+      {
+        "English": "Households (in thousands)", 
+        "Spanish": "Hogares (en miles)"
+      },
+      {
+        "English": "Housing", 
+        "Spanish": "Alojamiento"
+      },
+      {
+        "English": "Housing Unit Count by Department, Guatemala 2018", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Housing Unit Count by Drinking Water Supply\nSystem", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema\nde Suministro de Agua Potable"
+      },
+      {
+        "English": "Housing Unit Count by Hygiene System", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema de Higiene"
+      },
+      {
+        "English": "Housing Unit Count by Hygiene System, Fixed Bath or Shower is Outside Housing Unit", 
+        "Spanish": "Sistema de Higiene por Cantidad de Unidades de Vivienda, Baño Fijo o Ducha está Fuera de Unidade de Vivienda"
+      },
+      {
+        "English": "Housing Unit Count by Hygiene System, No Fixed Bath or Shower Within Housing Unit", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema de Higiene, sin Baño Fijo o Ducha Dentro de la Unidad de Vivienda"
+      },
+      {
+        "English": "Housing Unit Count by Municipality, Guatemala 2018", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Housing Unit Count by Number of Rooms", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Número de Habitaciones"
+      },
+      {
+        "English": "Housing Unit Count by Ownership Status", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Estado de Propiedad"
+      },
+      {
+        "English": "Housing Unit Count by Sewage Disposal\nSystem", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema\nde Eliminación de Aguas Residuales"
+      },
+      {
+        "English": "Housing Unit Count by Solid Waste Disposal\nSystem", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema de\nEliminación de Residuos Sólidos"
+      },
+      {
+        "English": "Housing Unit Count by Tenure Status", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Estado de Tenencia"
+      },
+      {
+        "English": "Housing Unit Count by Type", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Tipo"
+      },
+       {
+        "English": "Housing Unit Count by Type of Toilet", 
+        "Spanish": "Cantidad de Unidades de Vivienda por\nTipo de Inodoro"
+      },
+      {
+        "English": "Housing Unit Count by Water Supply\nSystem", 
+        "Spanish": "Cantidad de Unidades de Vivienda por Sistema\nde Suministro de Agua"
+      },
+      {
+        "English": "Housing Units", 
+        "Spanish": "Unidades de Vivienda"
+      },
+      {
+        "English": "Housing Units (in hundred thousands)", 
+        "Spanish": "Unidades de Vivienda (en cientos de miles)"
+      },
+      {
+        "English": "Housing Units (in thousands)", 
+        "Spanish": "Unidades de Vivienda (en miles)"
+      },
+      {
+        "English": "Housing Units (in millions)", 
+        "Spanish": "Unidades de Vivienda (en milliones)"
+      },
+      {
+        "English": "Housing Units (Percent)", 
+        "Spanish": "Unidades de Vivienda (Porcentaje)"
+      },
+      {
+        "English": "Housing units", 
+        "Spanish": "Unidades de vivienda"
+      },
+      {
+        "English": "housing units", 
+        "Spanish": "unidades de vivienda"
+      },
+      {
+        "English": "Human health and social work activities",
+        "Spanish": "Actividades de salud humana y trabajo social"
+      },
+      {
+        "English": "Hygiene", 
+        "Spanish": "Higiene"
+      },
+      {
+        "English": "I. Accommodation and food service activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ICT", 
+        "Spanish": "TIC"
+      },
+      {
+        "English": "If you'd like to learn more, reach out to us at NSO@DOMAIN.GOV", 
+        "Spanish": "Si desea obtener más información, comuníquese con nosotros en NSO@DOMAIN.GOV"
+      },
+      {
+        "English": "If you need to download temporary shapefiles...", 
+        "Spanish": "Si necesita descargar shapefiles temporales..."
+      },
+      {
+        "English": "If your data is ready to be pre-processed for use in the applications, click here", 
+        "Spanish": "Si sus datos están listos para ser procesados para su uso en las aplicaciones, haga clic aquí"
+      },
+      {
+        "English": "Inbound", 
+        "Spanish": "Entrantes"
+      },
+      {
+        "English": "Inbound Domestic Migrants by Department, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Entrantes por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Inbound Domestic Migrants by Municipality, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Entrantes por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Inbound domestic migrants to the selected location", 
+        "Spanish": "Migrantes nacionales entrantes a la ubicación seleccionada"
+      },
+      {
+        "English": "Infant Mortality Rate", 
+        "Spanish": "Tasa de Mortalidad Infantil"
+      },
+      {
+        "English": "Inbound People", 
+        "Spanish": "Personas Entrantes"
+      },
+      {
+        "English": "inbound people", 
+        "Spanish": "personas entrantes"
+      },
+      {
+        "English": "Information and communication",
+        "Spanish": "Información y Comunicación"
+      },
+      {
+        "English": "Internal Flows", 
+        "Spanish": "Flujos Internos"
+      },
+      {
+        "English": "International Migrant Population by Municipality (Percent of Population),\nGuatemala 2018", 
+        "Spanish": "Población Migrante Internacional por Municipio (Porcentaje de Población),\nGuatemala 2018"
+      },
+      {
+        "English": "International Migration", 
+        "Spanish": "Migración internacional"
+      },
+      {
+        "English": "Internet Access (Percent of Households)", 
+        "Spanish": "Acceso a Internet Porcentaje de Hogares)"
+      },
+      {
+        "English": "Internet from home", 
+        "Spanish": "Internet desde Casa"
+      },
+      {
+        "English": "Internet outside the home", 
+        "Spanish": "Internet fuera de la Casa"
+      },
+      {
+        "English": "ISCED 0:\nLess than\nprimary", 
+        "Spanish": "ISCED 0:\nMenos que\nprimario"
+      },
+      {
+        "English": "ISCED 1:\nPrimary", 
+        "Spanish": "ISCED 1:\nPrimario"
+      },
+      {
+        "English": "ISCED 2:\nLower secondary", 
+        "Spanish": "ISCED 2:\nSecundario inferior"
+      },
+      {
+        "English": "ISCED 3:\nUpper secondary", 
+        "Spanish": "ISCED 3:\nSecundario superior"
+      },
+      {
+        "English": "ISCED 4:\nPost-secondary\nnon-tertiary", 
+        "Spanish": "ISCED 4:\nPost-secundario\nno terciario"
+      },
+      {
+        "English": "ISCED 5:\nShort-cycle\ntertiary", 
+        "Spanish": "ISCED 5:\nTerciario de\nciclo corto"
+      },
+      {
+        "English": "ISCED 6:\nBachelor's or\nequivalent", 
+        "Spanish": "ISCED 6:\nBachillerato o\nequivalente"
+      },
+      {
+        "English": "ISCED 7:\nMaster's or\nequivalent", 
+        "Spanish": "ISCED 7:\nMaestría o\nequivalente"
+      },
+      {
+        "English": "ISCED 8:\nDoctoral or\nequivalent", 
+        "Spanish": "ISCED 8:\nDoctorado o\nequivalente"
+      },
+      {
+        "English": "ISCED level 0: Less than primary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 1: Primary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 2: Lower secondary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 3: Upper secondary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 4: Post-secondary non-tertiary education", 
+        "Spanish": "ERROR: PLACEHOLDERo"
+      },
+      {
+        "English": "ISCED level 5: Short-cycle tertiary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 6: Bachelor’s or equivalent level", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 7: Master’s or equivalent level", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED level 8: Doctoral or equivalent level", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED levels 2-3: Secondary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "ISCED levels 5-8: Tertiary education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "J. Information and communication", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "K. Financial and insurance activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Kerosene or Paraffin", 
+        "Spanish": "Queroseno o Parafina"
+      },
+      {
+        "English": "L. Real estate activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Labour and Economy", 
+        "Spanish": "Trabajo y Economía"
+      },
+      {
+        "English": "Labour Force Status", 
+        "Spanish": "Situación Laboral"
+      },
+       {
+        "English": "Landing", 
+        "Spanish": "Aterrizaje"
+      },
+      {
+        "English": "LengthofStay", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Less than primary", 
+        "Spanish": "Menos que primario"
+      },
+      {
+        "English": "Life Expectancy", 
+        "Spanish": "Expectativa de Vida"
+      },
+      {
+        "English": "Life Expectancy at Birth", 
+        "Spanish": "Expectativa de Vida a Nacer"
+      },
+      {
+        "English": "Liquefied petroleum gas (LPG)", 
+        "Spanish": "Gas Licuado de Petróleo (GLP)"
+      },
+      {
+        "English": "Literacy Rate", 
+        "Spanish": "Tasa de Alfabetización"
+      },
+      {
+        "English": "Literacy Rate (Percent)", 
+        "Spanish": "Tasa de Alfabetización (Porcentaje)"
+      },
+      {
+        "English": "Literacy Rate by Municipality, Guatemala 2018", 
+        "Spanish": "Tasa de Alfabetización por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "live births", 
+        "Spanish": "nacimientos vivos"
+      },
+      {
+        "English": "Living Quarters", 
+        "Spanish": "Viviendas"
+      },
+      {
+        "English": "Living Quarters (in millions)", 
+        "Spanish": "Viviendas (en millones)"
+      },
+      {
+        "English": "Living Quarters (in ten thousands)", 
+        "Spanish": "Viviendas (en dices de miles)"
+      },
+      {
+        "English": "Living Quarters Count by Type", 
+        "Spanish": "Cantidad de Vivienda por Tipo"
+      },
+      {
+        "English": "Lower secondary", 
+        "Spanish": "Secundario inferior"
+      },
+      {
+        "English": "M. Professional, scientific and technical activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Main purpose is for supplying data to maps and\nto statistic panels", 
+        "Spanish": "El propósito principal es proporcionar datos a\nmapas y paneles de estadísticas"
+      },
+      {
+        "English": "Main purpose is for supplying data to plots", 
+        "Spanish": "El propósito principal es proporcionar datos a gráficos"       
+      },
+      {
+        "English": "Male", 
+        "Spanish": "Hombres"       
+      },
+      {
+        "English": "Managers", 
+        "Spanish": "Gerentes"
+      },
+      {
+        "English": "Manufacturing",
+        "Spanish": "Fabricación"
+      },
+      {
+        "English": "Mapping", 
+        "Spanish": "Cartografía"
+      },
+      {
+        "English": "Married",
+        "Spanish": "Casado"
+      },
+      {
+        "English": "Married Separated",
+        "Spanish": "Casado Separado"
+      },
+      {
+        "English": "Married with one or more unmarried children",
+        "Spanish": "Casado con uno o más hijos solteros"
+      },
+      {
+        "English": "Married without children",
+        "Spanish": "Casado sin hijos"
+      },
+      {
+        "English": "Master's or equivalent", 
+        "Spanish": "Maestría o equivalente"
+      },
+      {
+        "English": "Materials", 
+        "Spanish": "Materiales"
+      },
+      {
+        "English": "Measuring Disability in a Census", 
+        "Spanish": "Medición de la Discapacidad en un Censo"
+      },
+      {
+        "English": "Measuring Fertility in a Census", 
+        "Spanish": "Medición de la Fertilidad en un Censo"
+      },
+      {
+        "English": "Measuring Migration in a Census", 
+        "Spanish": "Medición de la Migración en un Censo"
+      },
+      {
+        "English": "Measuring Water, Sanitation, and Hygiene in a Census", 
+        "Spanish": "Medición del Agua, el Saneamiento y la Higiene en un Censo"
+      },
+      {
+        "English": "Median Age", 
+        "Spanish": "Edad Media"
+      },
+      {
+        "English": "Member of producers' cooperatives", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Member of producers'\ncooperatives", 
+        "Spanish": "Miembro de cooperativas\nde productores"
+      },
+      {
+        "English": "men per woman", 
+        "Spanish": "hombres por mujer"
+      },
+      {
+        "English": "Migration", 
+        "Spanish": "Migración"
+      },
+      {
+        "English": "Migration Totals by Municipality, Guatemala 2018", 
+        "Spanish": "Totales de Migración por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Mining and quarrying",
+        "Spanish": "Minas y canteras"
+      },
+      {
+        "English": "Mobile telephone", 
+        "Spanish": "Teléfono móvil"
+      },
+      {
+        "English": "Mortality", 
+        "Spanish": "Mortalidad"
+      },
+      {
+        "English": "most common", 
+        "Spanish": "más común"
+      },
+      {
+        "English": "Most Common Cooking Fuel by Department,\nGuatemala 2018", 
+        "Spanish": "Combustible de Cocina Más Común por Departamento,\nGuatemala 2018"
+      },
+      {
+        "English": "Most Common Cooking Fuel by Municipality", 
+        "Spanish": "Combustible de Cocina Más Común por Municipio"
+      },
+      {
+        "English": "Most Common Cooking Fuel by Municipality, Guatemala 2018", 
+        "Spanish": "Combustible de Cocina Más Común por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Most Common Cooking Fuel, Count by Department", 
+        "Spanish": "Combustible de Cocina Más Común, Cantidad por Departamento"
+      },
+      {
+        "English": "Most Common Cooking Fuel, Count by Municipality", 
+        "Spanish": "Combustible de Cocina Más Común, Cantidad por Municipio"
+      },
+      {
+        "English": "Most common destination from here", 
+        "Spanish": "Destino más común desde aquí"
+      },
+      {
+        "English": "Most Common Fuel for Cooking", 
+        "Spanish": "Combustible de Cocina Más Común"
+      },
+      {
+        "English": "Most Common Fuel for Lighting", 
+        "Spanish": "Combustible Más Común para Iluminación"
+      },
+      {
+        "English": "Most common immigrant source country", 
+        "Spanish": "País de origen de inmigrantes más común"
+      },
+      {
+        "English": "Mother with one or more unmarried children",
+        "Spanish": "Madre con uno o más hijos solteros"
+      },
+      {
+        "English": "Movers from abroad", 
+        "Spanish": "Inmigrantes del extranjero"
+      },
+      {
+        "English": "Movers from a different department", 
+        "Spanish": "Inmigrantes de un departamento diferente"
+      },
+      {
+        "English": "Movers to a different department", 
+        "Spanish": "Inmigrantes a un departamento diferente"
+      },
+      {
+        "English": "N. Administrative and support service activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "NA", 
+        "Spanish": "NA"
+      },
+      {
+        "English": "Narrow format", 
+        "Spanish": "Formato estrecho"
+      },
+      {
+        "English": "National", 
+        "Spanish": "Nacional"
+      },
+      {
+        "English": "National figures", 
+        "Spanish": "Números nacionales"
+      },
+      {
+        "English": "Net", 
+        "Spanish": "Neto"
+      },
+      {
+        "English": "Net Domestic Migrants by Department, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Netos por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Net Domestic Migrants by Municipality, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Netos por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Net domestic migrants from the selected location", 
+        "Spanish": "Migrantes domésticos netos de la ubicación seleccionada"
+      },
+      {
+        "English": "Net People", 
+        "Spanish": "Personas Netas"
+      },
+      {
+        "English": "net people", 
+        "Spanish": "personas netas"
+      },
+      {
+        "English": "New Technologies in Census Geographic Listing", 
+        "Spanish": "Nuevas Tecnologías en el Listado Geográfico del Censo"
+      },
+      {
+        "English": "New Technologies in an E-Census", 
+        "Spanish": "Nuevas Tecnologías en un E-Censo"
+      },
+      {
+        "English": "No disposal system", 
+        "Spanish": "Sin sistema de eliminación"
+      },
+      {
+        "English": "No fixed bath or shower available", 
+        "Spanish": "No hay bañera o ducha fija disponible"
+      },
+      {
+        "English": "No function on internal content pages", 
+        "Spanish": "No funciona en las páginas de contenido interno"
+      },
+      {
+        "English": "No internet", 
+        "Spanish": "Sin internet"
+      },
+      {
+        "English": "Non-owner-occupied", 
+        "Spanish": "No ocupado por el dueño"
+      },
+      {
+        "English": "Non-residential buildings", 
+        "Spanish": "Edificios no residenciales"
+      },
+      {
+        "English": "Notes", 
+        "Spanish": "Notas"
+      },
+      {
+        "English": "No toilet available", 
+        "Spanish": "No hay inodoro\ndisponible"
+      },
+      {
+        "English": "Nuclear household",
+        "Spanish": "Familia nuclear"
+      },
+      {
+        "English": "O. Public administration and defence; compulsory social security", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Occupants burn solid waste", 
+        "Spanish": "Los ocupantes queman desechos sólidos"
+      },
+      {
+        "English": "Occupants bury solid waste", 
+        "Spanish": "Los ocupantes entierran desechos sólidos"
+      },
+      {
+        "English": "Occupants compost solid waste", 
+        "Spanish": "Los ocupantes hacen abono de desechos sólidos"
+      },
+      {
+        "English": "Occupants dispose of solid waste in a local dump not supervised by authorities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Occupants dispose of solid waste\nin a local dump not supervised\nby authorities", 
+        "Spanish": "Los ocupantes tiran los desechos\nsólidos en un vertedero local no\nsupervisado por las autoridades"
+      },
+      {
+        "English": "Occupants dispose of solid waste in a local dump supervised by authorities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Occupants dispose of solid waste in\na local dump supervised by authorities", 
+        "Spanish": "Los ocupantes tiran los desechos sólidos\nen un vertedero local supervisado por las\nautoridades"
+      },
+      {
+        "English": "Occupants dispose solid waste into river, sea, creek, pond", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Occupants dispose of solid waste into\nriver, sea, creek, pond", 
+        "Spanish": "Los ocupantes tiran los desechos sólidos\nal río, mar, arroyo, estanque"
+      },
+      {
+        "English": "Occupied", 
+        "Spanish": "Ocupado"
+      },
+      {
+        "English": "Occupancy Status", 
+        "Spanish": "Estado de Ocupación"
+      },
+      {
+        "English": "Occupied Structures, Ownership, and Tenure", 
+        "Spanish": "Estructuras Ocupadas, Propiedad y Tenencia"
+      },
+      {
+        "English": "Oil", 
+        "Spanish": "Aceite"
+      },
+      {
+        "English": "Oil (including vegetable oils)", 
+        "Spanish": "Aceite (incluidos los aceites vegetales)"
+      },
+      {
+        "English": "one dot = 500 people", 
+        "Spanish": "un punto = 500 personas"
+      },
+      {
+        "English": "One person",
+        "Spanish": "Un persona"
+      },
+      {
+        "English": "Other", 
+        "Spanish": "Otro"
+      },
+      {
+        "English": "Other arrangement", 
+        "Spanish": "Otro arreglo"
+      },
+      {
+        "English": "Other housing units", 
+        "Spanish": "Otras unidades de vivienda"
+      },
+      {
+        "English": "Other materials", 
+        "Spanish": "Otros materiales"
+      },
+      {
+        "English": "Other Relative",
+        "Spanish": "Otra Pariente"
+      },
+      {
+        "English": "Other residential buildings", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Other residential\nbuildings", 
+        "Spanish": "Otros edificios\nresidenciales"
+      },
+      {
+        "English": "Other service activities",
+        "Spanish": "Otras actividades de servicios"
+      },
+      {
+        "English": "Other Unrelated",
+        "Spanish": "Otro no relacionado"
+      },
+      {
+        "English": "Outbound", 
+        "Spanish": "Salientes"
+      },
+      {
+        "English": "Outbound Domestic Migrants by Department, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Salientes por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Outbound Domestic Migrants by Municipality, Guatemala 2018", 
+        "Spanish": "Migrantes Domésticos Salientes por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Outbound domestic migrants from the selected location", 
+        "Spanish": "Migrantes nacionales salientes de la ubicación seleccionada"
+      },
+      {
+        "English": "Outbound People", 
+        "Spanish": "Personas Salientes"
+      },
+      {
+        "English": "outbound people", 
+        "Spanish": "personas salientes"
+      },
+      {
+        "English": "Outside the\nlabour force", 
+        "Spanish": "Fuera de la\nFuerza Laboral "
+      },
+      {
+        "English": "Outside the labour force", 
+        "Spanish": "Fuera de la Fuerza Laboral "
+      },
+      {
+        "English": "Own-account\nworkers", 
+        "Spanish": "Trabajadores por\ncuenta propia"
+      },
+      {
+        "English": "Own-account workers", 
+        "Spanish": "Trabajadores por cuenta propia"
+      },
+      {
+        "English": "Owner-occupied", 
+        "Spanish": "Ocupado por el dueño"
+      },
+      {
+        "English": "Ownership Status", 
+        "Spanish": "Estado de propiedad"
+      },
+      {
+        "English": "P. Education", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Participation in Own-Use Production of Goods by Department, Guatemala 2018", 
+        "Spanish": "Participación en la Producción de Bienes para Uso Propio por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Partner",
+        "Spanish": "Pareja"
+      },
+      {
+        "English": "people", 
+        "Spanish": "personas"
+      },
+      {
+        "English": "People", 
+        "Spanish": "Personas" 
+      },
+      {
+        "English": "People (in thousands)", 
+        "Spanish": "Personas (en miles)" 
+      },
+      {
+        "English": "People (in hundred thousands)", 
+        "Spanish": "Personas (en cientos de miles)" 
+      },
+      {
+        "English": "People (in millions)", 
+        "Spanish": "Personas (en millones)" 
+      },
+      {
+        "English": "People (in ten thousands)", 
+        "Spanish": "Personas (en decenas de miles)" 
+      },
+      {
+        "English": "people per square kilometer", 
+        "Spanish": "personas por kilómetro cuadrado"
+      },
+      {
+        "English": "PercElectric", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Percent Aged 0 to 14 Years", 
+        "Spanish": "Porcentaje de 0 a 14 Años"
+      },
+      {
+        "English": "Percent Aged 15 to 64 Years", 
+        "Spanish": "Porcentaje de 15 a 64 Años"
+      },
+      {
+        "English": "Percent Aged 65+ Years", 
+        "Spanish": "Porcentaje de Personas Mayores de 65 Años"
+      },
+      {
+        "English": "percent literacy", 
+        "Spanish": "porcentaje de alfabetización"
+      },
+      {
+        "English": "Percent of Households with Amenity by Municipality, Guatemala 2018", 
+        "Spanish": "Porcentaje de Hogares con Comodidad por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "percent of households with amenity", 
+        "Spanish": "porcentaje de hogares con comodidad"
+      },
+      {
+        "English": "Percent of Households with Electricity by Department, Guatemala 2018", 
+        "Spanish": "Porcentaje de Hogares con Electricidad por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Households with Electricity by Municipality, Guatemala 2018", 
+        "Spanish": "Porcentaje de Hogares con Electricidad por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Households with Internet Access by Department, Guatemala 2018", 
+        "Spanish": "Porcentaje de Hogares con Acceso a Internet por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Households with Internet Access by Municipality, Guatemala 2018", 
+        "Spanish": "Porcentaje de Hogares con Acceso a Internet por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Living Quarters With More Than One\nHousehold by Department, Guatemala 2018", 
+        "Spanish": "Porcentaje de Viviendas con Más de un\nHogar por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Living Quarters", 
+        "Spanish": "Porcentaje de Viviendas"
+      },
+      {
+        "English": "Percent of Population", 
+        "Spanish": "Porcentaje de Población"
+      },
+      {
+        "English": "Percent of Population Foreign Born, Guatemala 2018", 
+        "Spanish": "Porcentaje de Población Nacidos en el Extranjero, Guatemala 2018"
+      },
+      {
+        "English": "Percent of Population with Foreign Citizenship, Guatemala 2018", 
+        "Spanish": "Porcentaje de Población con Ciudadanía Extranjera, Guatemala 2018"
+      },
+      {
+        "English": "percent of the population", 
+        "Spanish": "porcentaje de la población"
+      },
+      {
+        "English": "percent prevalence, people with at least some difficulty", 
+        "Spanish": "porcentaje de prevalencia, personas con al menos alguna dificultad"
+      },
+      {
+        "English": "percent unemployment", 
+        "Spanish": "porcentaje de desempleo"
+      },
+      {
+        "English": "PercInternet", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "PercMT1Households", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Personal computer", 
+        "Spanish": "Computadora personal"
+      },
+      {
+        "English": "Persons not classifiable\nby status", 
+        "Spanish": "Personas no clasificables\npor estatus"
+      },
+      {
+        "English": "Persons not classifiable by status", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Piped water inside the unit", 
+        "Spanish": "Agua entubada dentro de la unidad"
+      },
+      {
+        "English": "Piped water outside the unit,\nwithin 200 metres", 
+        "Spanish": "Agua entubada fuera de la unidad,\na menos de 200 metros"
+      },
+      {
+        "English": "Piped water outside the unit, within 200 metres", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Planning and Management", 
+        "Spanish": "Planificación y Gestión"
+      },
+      {
+        "English": "Plant and machine\noperators, and\nassemblers", 
+        "Spanish": "Operadores de plantas\ny máquinas, y\nensambladores"
+      },
+      {
+        "English": "Plant and machine operators, and assemblers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Population by Age", 
+        "Spanish": "Población por Edad"
+      },
+      {
+        "English": "Population by Department", 
+        "Spanish": "Población por Departamento"
+      },
+      {
+        "English": "Population by Department, Guatemala 2018", 
+        "Spanish": "Población por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Population by Employment Status", 
+        "Spanish": "Población por Estatus Laboral "
+      },
+      {
+        "English": "Population by Industry", 
+        "Spanish": "Población por Industria "
+      },
+      {
+        "English": "Population by Labour Force Status", 
+        "Spanish": "Población por Situación Laboral"
+      },
+      {
+        "English": "Population by Marital Status",
+        "Spanish": "Población por Estado Civil"
+      },
+      {
+        "English": "Population by Municipality, Guatemala 2018",
+        "Spanish": "Población por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Population by Occupation", 
+        "Spanish": "Población por Ocupación"
+      },
+      {
+        "English": "Population by Relationship to the Reference Person of the Household",
+        "Spanish": "Población por Relación con la Persona de Referencia del Hogar"
+      },
+      {
+        "English": "Population by Sex", 
+        "Spanish": "Población por Sexo"
+      },
+      {
+        "English": "Population by Urban / Rural Residence", 
+        "Spanish": "Población por Situación Urbana / Rural"
+      },
+      {
+        "English": "Population Density", 
+        "Spanish": "Densidad de la Población"
+      },
+      {
+        "English": "Population Distribution, Guatemala 2018", 
+        "Spanish": "Distribución de la Población, Guatemala 2018"
+      },
+      {
+        "English": "Population that is a new resident", 
+        "Spanish": "Población que es nuevo residente"
+      },
+      {
+        "English": "Population that is a new resident (Percent)", 
+        "Spanish": "Población que es nuevo residente (Porcentaje)"
+      },
+      {
+        "English": "Population with Foreign Citizenship", 
+        "Spanish": "Población con Ciudadanía Extranjera"
+      },
+      {
+        "English": "Population with Foreign Citizenship (People)", 
+        "Spanish": "Población con Ciudadanía Extranjera (Personas)"
+      },
+      {
+        "English": "Power and Technology", 
+        "Spanish": "Energía y Tecnología"
+      },
+      {
+        "English": "Prefabricated units", 
+        "Spanish": "Unidades Prefabricadas"
+      },
+      {
+        "English": "Pregnancy-Related", 
+        "Spanish": "Relacionado con el Embarazo"
+      },
+       {
+        "English": "Pre-Process Data", 
+        "Spanish": "Procesar los Datos"
+      },
+      {
+        "English": "Prevalence Rate", 
+        "Spanish": "Tasa de prevalencia "
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty in Walking\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Caminar\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty in Seeing\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Ver\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty in Hearing\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Oir\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Cognition Difficulty\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Cognición\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nCognition Difficulty by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para \nCognición por Municipio"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty by Municipality, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nDifficulty in Hearing by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna \nDificultad para Oir por Municipio"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nDifficulty in Seeing by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna \nDificultad para Ver por Municipio"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nDifficulty in Walking by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna \nDificultad para Caminar por Municipio"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty With Communication\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Comunicación\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nDifficulty With Communication by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna \nDificultad para Comunicación por Municipio"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some Difficulty With Selfcare\nby Department, Guatemala 2018", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna Dificultad para Autocuidado\npor Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Prevalence Rate of Population with at Least Some \nDifficulty With Self-Care by Municipality", 
+        "Spanish": "Tasa de Prevalencia de la Población con al Menos Alguna \nDificultad para Autocuidado por Municipio"
+      },
+      {
+        "English": "Prevalence Rate (Percent)", 
+        "Spanish": "Tasa de Prevalencia (Porcentaje)"
+      },
+      {
+        "English": "Primary", 
+        "Spanish": "Primario"
+      },
+      {
+        "English": "Primary School Attendance", 
+        "Spanish": "Asistencia a la Escuela Primaria"
+      },
+      {
+        "English": "Primary School Attendance (People)", 
+        "Spanish": "Asistencia a la Escuela Primaria (Personas)"
+      },
+      {
+        "English": "Professionals", 
+        "Spanish": "Profesionales"
+      },
+      {
+        "English": "Professional, scientific and technical activities",
+        "Spanish": "Actividades profesionales, científicas y técnicas"
+      },
+      {
+        "English": "Public administration and defence; compulsory social security",
+        "Spanish": "Administración pública y defensa; seguridad social obligatoria"
+      },
+      {
+        "English": "Publication and Export", 
+        "Spanish": "Publicación y Exportación"
+      },
+      {
+        "English": "Publicity and Communication", 
+        "Spanish": "Publicidad y Comunicación"
+      },
+      {
+        "English": "PUBLISH", 
+        "Spanish": "PUBLICAR"
+      },
+      {
+        "English": "Q. Human health and social work activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "R. Arts, entertainment and recreation", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Radio", 
+        "Spanish": "Radio"
+      },
+      {
+        "English": "Real estate activities", 
+        "Spanish": "Actividades inmobiliarias"
+      },
+      {
+        "English": "Report export", 
+        "Spanish": "Exportación de informes"
+      },
+      {
+        "English": "Residential Building Count by Type", 
+        "Spanish": "Cantidad de Edificios Residenciales por Tipo"
+      },
+      {
+        "English": "Residential buildings", 
+        "Spanish": "Edificios Residenciales"
+      },
+      {
+        "English": "Rooms", 
+        "Spanish": "Habitaciones"
+      },
+      {
+        "English": "Rural", 
+        "Spanish": "Rural" 
+      },
+      {
+        "English": "S. Other service activities", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Sanitation", 
+        "Spanish": "Saneamiento"
+      },
+      {
+        "English": "School Attendance by Sex", 
+        "Spanish": "Asistencia a la Escuela por Sexo"
+      },
+      {
+        "English": "Secondary", 
+        "Spanish": "Secundaria"
+      },
+      {
+        "English": "Secondary School Attendance", 
+        "Spanish": "Asistencia a la Escuela Secundaria"
+      },
+      {
+        "English": "Secondary School Attendance (People)", 
+        "Spanish": "Asistencia a la Escuela Secundaria (Personas)"
+      },
+      {
+        "English": "Seeing", 
+        "Spanish": "Viendo"
+      },
+      {
+        "English": "Select a location", 
+        "Spanish": "Selecciona una ubicación"
+      },
+      {
+        "English": "Select a location from the Controls dropdown to see the spatial distribution of migrants to and from the selected location from other domestic locations", 
+        "Spanish": "Seleccione una ubicación del menú desplegable Controles para ver la distribución espacial de los migrantes hacia y desde la ubicación seleccionada desde otras ubicaciones nacionales"
+      },
+      {
+        "English": "Select a metric", 
+        "Spanish": "Selecciona una métrica"
+      },
+      {
+        "English": "Select a subtopic", 
+        "Spanish": "Selecciona una subtema"
+      },
+      {
+        "English": "Selected", 
+        "Spanish": "Seleccionado"
+      },
+      {
+        "English": "Selfcare", 
+        "Spanish": "Autocuidado"
+      },
+      {
+        "English": "Self-employed", 
+        "Spanish": "Trabajadores por Cuenta Propia"
+      },
+      {
+        "English": "Self-Employed Population by Employment\nStatus", 
+        "Spanish": "Población de los Trabajadores por Cuenta\nPropia por Situación Laboral"
+      },
+      {
+        "English": "Service and\nsales workers", 
+        "Spanish": "Trabajadores de\nservicios y ventas"
+      },
+      {
+        "English": "Sex Ratio", 
+        "Spanish": "Proporción de Sexos"
+      },
+      {
+        "English": "Sex Ratio at Birth", 
+        "Spanish": "Proporción de Sexos al Nacer "
+      },
+      {
+        "English": "Shared", 
+        "Spanish": "Compartido"
+      },
+      {
+        "English": "Short-cycle tertiary", 
+        "Spanish": "Terciario de ciclo corto"
+      },
+      {
+        "English": "Single",
+        "Spanish": "Solo"
+      },
+      {
+        "English": "Skilled agricultural, forestry and fishery workers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Skilled agricultural,\nforestry and fishery\nworkers", 
+        "Spanish": "Trabajadores calificados de\nla agricultura, la\nsilvicultura y la pesca"
+      },
+      {
+        "English": "Social and Demographic Indicators", 
+        "Spanish": "Indicadores Sociales y Demográficos"
+      },
+      {
+        "English": "Solid waste collected by self-appointed collectors", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Solid waste collected by\nself-appointed collectors", 
+        "Spanish": "Residuos sólidos recolectados\npor recolectores autoproclamados"
+      },
+      {
+        "English": "Solid waste collected on an irregular basis by authorized collectors", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Solid waste collected on an irregular\nbasis by authorized collectors", 
+        "Spanish": "Residuos sólidos recogidos de forma\nirregular por recolectores autorizados"
+      },
+      {
+        "English": "Solid waste collected on a regular basis by authorized collectors", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Solid waste collected on a regular\nbasis by authorized collectors", 
+        "Spanish": "Residuos sólidos recogidos periódicamente\npor recolectores autorizados"
+      },
+      {
+        "English": "Source: GADM API (version 2.8)", 
+        "Spanish": "Fuente: API de GADM (versión 2.8)"
+      },
+      {
+        "English": "Spanish", 
+        "Spanish": "Español"
+      },
+      {
+        "English": "Spatial Data", 
+        "Spanish": "Datos Espaciales"
+      },
+      {
+        "English": "Spouse",
+        "Spanish": "Cónyuge"
+      },
+      {
+        "English": "Spouse of Child",
+        "Spanish": "Cónyuge del hijo"
+      },
+      {
+        "English": "STUDY", 
+        "Spanish": "ESTUDIAR"
+      },
+      {
+        "English": "Subtopic:", 
+        "Spanish": "Subtema:"
+      },
+      {
+        "English": "Sustainable Development Goals and the 2020 Round of Censuses", 
+        "Spanish": "Los Objetivos de Desarrollo Sostenible y la Ronda de Censos 2020"
+      },
+      {
+        "English": "T. Activities of households as employers; undifferentiated goods and services-producing activities of households for own use", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Technical Briefs", 
+        "Spanish": "Resúmenes Técnicos "
+      },
+      {
+        "English": "Technicians and associate\nprofessionals", 
+        "Spanish": "Técnicos y profesionales\nasociados"
+      },
+      {
+        "English": "Television", 
+        "Spanish": "Televisión"
+      },
+      {
+        "English": "Tenure Status", 
+        "Spanish": "Estado de tenencia"
+      },
+      {
+        "English": "Tertiary", 
+        "Spanish": "Terciario"
+      },
+      {
+        "English": "The Guatemala 2018 Census Results Portal", 
+        "Spanish": "Portal de Resultados del Censo de Guatemala 2018"
+      },
+      {
+        "English": "These figures and calculations include only individuals aged 5 years and older", 
+        "Spanish": "Estas cifras y cálculos incluyen solo a personas de 5 años o más"
+      },
+      {
+        "English": "Toilet outside housing unit", 
+        "Spanish": "ERROR, SHOULD NOT BE VISIBLE"
+      },
+      {
+        "English": "Toilet outside\nhousing unit", 
+        "Spanish": "Inodoro fuera de\nla unidad de vivienda"
+      },
+      {
+        "English": "Toilet within housing unit", 
+        "Spanish": "Inodoro dentro de la unidad de vivienda"
+      },
+      {
+        "English": "Toilet within\nhousing unit", 
+        "Spanish": "Inodoro dentro de\nla unidad de vivienda"
+      },
+      {
+        "English": "Total", 
+        "Spanish": "Total"
+      },
+      {
+        "English": "Total Fertility Rate", 
+        "Spanish": "Tasa de Fertilidad Total"
+      },
+      {
+        "English": "Total Population", 
+        "Spanish": "Población Total"
+      },
+      {
+        "English": "Transportation and storage",
+        "Spanish": "Transporte y Almacenamiento"
+      },
+      {
+        "English": "Type", 
+        "Spanish": "Tipo"
+      },
+      {
+        "English": "U. Activities of extraterritorial organizations and bodies", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Unburnt clay, mud, earth", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Unburnt clay,\nmud, earth", 
+        "Spanish": "Arcilla sin Quemar,\nBarro, Tierra "
+      },
+      {
+        "English": "Unemployed", 
+        "Spanish": "Desempleados"
+      },
+      {
+        "English": "UnemploymentRate", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Unemployment Rate", 
+        "Spanish": "Tasa de Desempleo"
+      },
+      {
+        "English": "Unemployment Rate by Department, Guatemala 2018", 
+        "Spanish": "Tasa de Desempleo por Departamento, Guatemala 2018"
+      },
+      {
+        "English": "Unemployment Rate by Municipality, Guatemala 2018", 
+        "Spanish": "Tasa de Desempleo por Municipio, Guatemala 2018"
+      },
+      {
+        "English": "Unknown", 
+        "Spanish": "Incógnito"
+      },
+      {
+        "English": "UPLOAD", 
+        "Spanish": "SUBIR"
+      },
+      {
+        "English": "Upload your census data and spatial data to the application", 
+        "Spanish": "Sube los datos del censo y los datos espaciales a la aplicación"
+      },
+      {
+        "English": "Upper secondary", 
+        "Spanish": "Secundario superior"
+      },
+      {
+        "English": "Urban", 
+        "Spanish": "Urbana"       
+      },
+      {
+        "English": "Use the menu on the left to explore census data by different themes", 
+        "Spanish": "Use el menú de la izquierda para explorar los datos del censo por diferentes temas"
+      },
+      {
+        "English": "Use these tabs to review the data that you are uploading\nto the application. If any tab appears empty, make sure\nthat you have placed an Excel file with the correct name\nin the Data folder for the OSDS application.", 
+        "Spanish": "Utilice estas pestañas para revisar los datos que está cargando\nen la aplicación. Si alguna pestaña aparece vacía,\nasegúrese de haber colocado un archivo de Excel con el\nnombre correcto en la carpeta Data para la aplicación OSDS."
+      },
+      {
+        "English": "Used for domestic flow mapper tool", 
+        "Spanish": "Se utiliza para la herramienta de mapeo de flujo doméstico"
+      },
+      {
+        "English": "Vacant / not occupied", 
+        "Spanish": "Vacante / no ocupado"
+      },
+      {
+        "English": "Viewing:", 
+        "Spanish": "Viendo:"
+      },
+      {
+        "English": "Walking", 
+        "Spanish": "Caminando "
+      },
+      {
+        "English": "WARNING: Will overwrite files ADM0.shp, ADM1.shp, and ADM2.shp if they currently exist in the www folder", 
+        "Spanish": "ADVERTENCIA: Sobrescribirá los archivos ADM0.shp, ADM1.shp y ADM2.shp si actualmente existen en la carpeta www"
+      },
+      {
+        "English": "Water", 
+        "Spanish": "Agua"
+      },
+      {
+        "English": "Water, Sanitation and Hygiene", 
+        "Spanish": "Agua, Saneamiento e Higiene"
+      },
+      {
+        "English": "Water, Sanitation, and Hygiene", 
+        "Spanish": "Agua, Saneamiento e Higiene"
+      },
+      {
+        "English": "Water supply; sewerage, waste management and remediation activities",
+        "Spanish": "Suministro de agua; actividades de saneamiento, gestión de residuos y remediación"
+      },
+      {
+        "English": "Welcome to Guatemala, come explore our country with us", 
+        "Spanish": "Bienvenido a Guatemala, ven a explorar nuestro país con nosotros"
+      },
+      {
+        "English": "What is the three-letter ISO3 code for your country?", 
+        "Spanish": "¿Cuál es el código ISO3 de tres letras para su país?"
+      },
+      {
+        "English": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+        "Spanish": "Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas"
+      },
+      {
+        "English": "Wide format",
+        "Spanish": "Formato ancho"
+      },
+      {
+        "English": "Widowed",
+        "Spanish": "Viudo"
+      },
+      {
+        "English": "With Disability", 
+        "Spanish": "Con Discapacidad"
+      },
+      {
+        "English": "With fixed bath or shower within housing unit", 
+        "Spanish": "Con bañera o ducha fija dentro de la unidad de vivienda"
+      },
+      {
+        "English": "With fixed bath or shower\nwithin housing unit", 
+        "Spanish": "Con bañera o ducha fija dentro\nde la unidad de vivienda"
+      },
+      {
+        "English": "Without fixed bath or shower within housing unit", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "Without fixed bath or shower\nwithin housing unit", 
+        "Spanish": "Sin bañera o ducha fija dentro\nde la unidad de vivienda "
+      },
+      {
+        "English": "Wood", 
+        "Spanish": "Madera"
+      },
+      {
+        "English": "Year", 
+        "Spanish": "Año"
+      },
+            {
+        "English": "Year of Arrival in Guatemela, Population Foreign Born", 
+        "Spanish": "Año de Llegada a Guatemala, Población Nacidos en el Extranjero"
+      },
+      {
+        "English": "Years", 
+        "Spanish": "Años"
+      },
+      {
+        "English": "years", 
+        "Spanish": "años"
+      },
+      {
+        "English": "Youth and Adult Literacy", 
+        "Spanish": "Alfabetización de Jóvenes y Adultos"
+      },
+      {
+        "English": "Youth Literacy", 
+        "Spanish": "Alfabetización de Jóvenes"
+      },
+      {
+        "English": "Youth Literacy Rate", 
+        "Spanish": "Tasa de Alfabetización de Jóvenes"
+      },
+      {
+        "English": "Youth Literacy Rate by Department, Guatemala 2018", 
+        "Spanish": "Tasa de Alfabetización de Jóvenes por\nDepartamento, Guatemala 2018"
+      },
+      {
+        "English": "Youth Literacy Rate (Percent)", 
+        "Spanish": "Tasa de Alfabetización de Jóvenes (Porcentaje)"
+      },
+      {
+        "English": "*included are walking, seeing, hearing, cognition, selfcare, and/or communication", 
+        "Spanish": "*se incluyen caminar, ver, oír, cognición, autocuidado y/o comunicación"
+      },
+      {
+        "English": "0 to 4", 
+        "Spanish": "0 a 4"
+      },
+      {
+        "English": "0. Armed forces occupations", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "1 square = 1 department", 
+        "Spanish": "1 cuadrado = 1 departamento"
+      },
+      {
+        "English": "1 square = 1 municipality", 
+        "Spanish": "1 cuadrado = 1 municipio"
+      },
+      {
+        "English": "1. Managers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "1 to 3", 
+        "Spanish": "1 a 3"
+      },
+      {
+        "English": "10,000 or more", 
+        "Spanish": "10,000 o más"
+      },
+      {
+        "English": "2. Professionals", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "2010", 
+        "Spanish": "2010"
+      },
+      {
+        "English": "2011", 
+        "Spanish": "2011"
+      },
+      {
+        "English": "2012", 
+        "Spanish": "2012"
+      },
+      {
+        "English": "2013", 
+        "Spanish": "2013"
+      },
+      {
+        "English": "2014", 
+        "Spanish": "2014"
+      },
+      {
+        "English": "2015", 
+        "Spanish": "2015"
+      },
+      {
+        "English": "2016", 
+        "Spanish": "2016"
+      },
+      {
+        "English": "2017", 
+        "Spanish": "2017"
+      },
+      {
+        "English": "2018", 
+        "Spanish": "2018"
+      },
+      {
+        "English": "2019", 
+        "Spanish": "2019"
+      },
+      {
+        "English": "2020", 
+        "Spanish": "2020"
+      },
+      {
+        "English": "2021", 
+        "Spanish": "2021"
+      },
+      {
+        "English": "3. Technicians and associate professionals", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "4 to 6", 
+        "Spanish": "4 a 6"
+      },
+      {
+        "English": "4. Clerical support workers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "5 to 9", 
+        "Spanish": "5 a 9"
+      },
+      {
+        "English": "5. Service and sales workers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "7 or more", 
+        "Spanish": "7 o más"
+      },
+      {
+        "English": "8 or more", 
+        "Spanish": "8 o más"
+      },
+      {
+        "English": "10 to 14", 
+        "Spanish": "10 a 14"
+      },
+      {
+        "English": "15 to 19", 
+        "Spanish": "15 a 19"
+      },
+      {
+        "English": "20 to 24", 
+        "Spanish": "20 a 24"
+      },
+      {
+        "English": "25 to 29", 
+        "Spanish": "25 a 29"
+      },
+      {
+        "English": "30 to 34", 
+        "Spanish": "30 a 34"
+      },
+      {
+        "English": "35 to 39", 
+        "Spanish": "35 a 39"
+      },
+      {
+        "English": "40 to 44", 
+        "Spanish": "40 a 44"
+      },
+      {
+        "English": "45 to 49", 
+        "Spanish": "45 a 49"
+      },
+      {
+        "English": "5. Service and sales worker", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "50 to 54", 
+        "Spanish": "50 a 54"
+      },
+      {
+        "English": "55 to 59", 
+        "Spanish": "55 a 59"
+      },
+      {
+        "English": "6. Skilled agricultural, forestry and fishery workers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "60 to 64", 
+        "Spanish": "60 a 64"
+      },
+      {
+        "English": "65+", 
+        "Spanish": "65+"
+      },
+      {
+        "English": "7. Craft and related trades workers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "8. Plant and machine operators, and assemblers", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "9. Elementary occupations", 
+        "Spanish": "ERROR: PLACEHOLDER"
+      },
+      {
+        "English": "", 
+        "Spanish": ""
+      }
+      ]
+}
+
+
+
+
