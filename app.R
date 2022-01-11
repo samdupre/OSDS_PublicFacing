@@ -4702,20 +4702,6 @@ server <- function(input, output, session) {
     newOptions <- purrr::map(lang_options, ~ list(key = .x$key, text = tr()$t(.x$text)))
     updateDropdown.shinyInput(session = session, inputId = "selected_language", options = newOptions)
   })
-  
-  #DATA CHECKS##################################################################
-  
-  # observeEvent(input$intialize_ADM0, {
-  #   if(file.exists("./www/GTM_adm0.shp")){
-  #     output$ADM0Present <- renderText({
-  #       "present"
-  #     })
-  #   } else {
-  #     output$ADM0Present <- renderText({
-  #       "not present"
-  #     })
-  #   }
-  # })
 
   #DATA DOWNLOAD BY PAGE########################################################
   # The code below provides users with a data download on each page. These data
