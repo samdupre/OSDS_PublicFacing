@@ -8,19 +8,21 @@ preprocessing <- function(...){
   # LOAD THE DATA
   imported_data <- read_excel("data/census.xlsx", sheet = "Population") %>%
     mutate(secondaryText = Type) %>% 
-    dplyr::select(!c(ADM2, OSDS_Join_Code,AgeOld,WealthQuintile))
+    dplyr::select(!c(ADM2, OSDS_Join_Code,AgeOld,WealthQuintile)) 
 
   saveRDS(imported_data, "data/app-data/census.RDS")
 
   imported_data_wide_all <- read_excel("data/census-wide.xlsx", sheet = "Population") %>% 
-    mutate(ADM1 = ifelse(ADM1 == "Quezaltenango", "Quetzaltenango", ADM1))
+    mutate(ADM1 = ifelse(ADM1 == "Quezaltenango", "Quetzaltenango", ADM1),
+           Name = ifelse(Name == "the department of Guatemala", "Guatemala", Name)) 
+  
   saveRDS(imported_data_wide_all, "data/app-data/census-wide.RDS")
 
   imported_migration_data <- read_excel("data/census-migration.xlsx", sheet = "Place1YearAgo") %>% 
     dplyr::select(!c(AlphaJoinC, Method, Type))
   saveRDS(imported_migration_data, "data/app-data/migration-flows.RDS")
 
-  ADM0_data <- imported_data_wide_all %>% filter(Level == "ADM0")
+  ADM0_data <- imported_data_wide_all %>% filter(Level == "ADM0") %>% dplyr::select(!ADM1)
   saveRDS(ADM0_data, "data/app-data/ADM0-data.RDS")
   ADM1_data <- imported_data_wide_all %>% filter(Level == "ADM1")
   saveRDS(ADM1_data, "data/app-data/ADM1-data.RDS")
@@ -31,6 +33,7 @@ preprocessing <- function(...){
   # ADM0
   sf0 <- st_as_sf(st_read("./www/ADM0.shp"), "Spatial")
   st_crs(sf0) <- 4326
+  sf0 <- sf0 %>% dplyr::select(NAME_0) %>% rename(ADM1 = NAME_0) %>% mutate(ADM1 = "All")
   sf_ADM_0 <- merge(sf0, ADM0_data)
   saveRDS(sf_ADM_0, "data/app-data/ADM0.RDS")
 
@@ -39,7 +42,8 @@ preprocessing <- function(...){
   st_crs(sf1) <- 4326
   sf_ADM_1 <- sf1 %>% dplyr::select(NAME_1) %>% mutate(NAME_1 = ifelse(NAME_1 == "Quezaltenango", "Quetzaltenango", NAME_1))
   colnames(sf_ADM_1)[1] <- "ADM1"
-  saveRDS(sf_ADM_1, "data/app-data/ADM1-polyline.RDS")
+  sf_polyline <- rbind(sf0,sf_ADM_1)
+  saveRDS(sf_polyline, "data/app-data/ADM1-polyline.RDS")
   sf_ADM_1 <- merge(sf_ADM_1, ADM1_data, all = TRUE)
   saveRDS(sf_ADM_1, "data/app-data/ADM1.RDS")
 
@@ -120,15 +124,15 @@ theme_plot <- function(...) {
     plot.subtitle = element_text(size = 11, 
                                  color = "black"),
     axis.title.x = element_text(size = 10, 
-                                color = "black"),
+                                color = "black",
+                                face = "bold"),
     axis.title.y = element_text(size = 10, 
-                                color = "black"),
+                                color = "black",
+                                face = "bold"),
     axis.text.x = element_text(size = 8, 
-                               color = "black",
-                               face = "plain"),
+                               color = "black"),
     axis.text.y = element_text(size = 8, 
-                               color = "black",
-                               face = "plain"),
+                               color = "black"),
     ...
   )
 }

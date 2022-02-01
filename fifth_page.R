@@ -6,7 +6,7 @@ nav_picker_fifthPage <- function(i18n) {
   class = "nav_picker",
   DefaultButton.shinyInput(
     "net_button",
-    text = i18n$t("Net Migration"),
+    text = i18n$t("Net People"),
     className = "nav_item"
   ),
   DefaultButton.shinyInput(

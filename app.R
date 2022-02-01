@@ -81,13 +81,13 @@ ui <- fluentPage(
 server <- function(input, output, session) {
   
   router$server(input, output, session)
-
+  
   output$current_page <- renderText({
     page <- get_page(session)
   })
-
+  
   outputOptions(output, "current_page", suspendWhenHidden = FALSE)
-
+  
   # Define initial reactive values for various page metrics  
   r <- reactiveValues(
     reactive_sf_ADM_2 = sf_ADM_2,
@@ -111,39 +111,39 @@ server <- function(input, output, session) {
     twelfthPage_metric = "electricity",
     currentLang = "English"
   )
-
- # Below, we define all labels for the leaflet maps on pages 1 - 12; i18n has trouble 
- # translating within leaflet, so we define reactive values based on the if else statements 
- # defined below. e.g., if r$currentLang == "Spanish", do X.
+  
+  # Below, we define all labels for the leaflet maps on pages 1 - 12; i18n has trouble 
+  # translating within leaflet, so we define reactive values based on the if else statements 
+  # defined below. e.g., if r$currentLang == "Spanish", do X.
   firstParams <- reactiveValues(
-    labels_en = c("0 - 19,999", "20,000 - 39,999", "40,000 - 79,999", "80,000 - 99,999", "100,000 or more"),
-    labels_sp = c("0 - 19,999", "20,000 - 39,999", "40,000 - 79,999", "80,000 - 99,999", "100,000 o más")
+    labels_en = c("0 - 14,999", "15,000 - 29,999", "30,000 - 44,999", "45,000 - 59,999", "60,000 or more"),
+    labels_sp = c("0 - 14,999", "15,000 - 29,999", "30,000 - 44,999", "45,000 - 59,999", "60,000 o más")
   )
   
   secondParams <- reactiveValues(
-    labels_en = c("0.0 - 1.9", "2.0 - 3.9", "4.0 - 5.9", "6.0 - 7.9", "8.0 or more"),
-    labels_sp = c("0.0 - 1.9", "2.0 - 3.9", "4.0 - 5.9", "6.0 - 7.9", "8.0 o más")
+    labels_en = c("0.0 - 1.4", "1.5 - 2.9", "3.0 - 4.4", "4.5 - 5.9", "6.0 or more"),
+    labels_sp = c("0.0 - 1.4", "1.5 - 2.9", "3.0 - 4.4", "4.5 - 5.9", "6.0 o más")
   )
   
   thirdParams <- reactiveValues(
-    labels_en = c("0.0 - 8.0", "8.0 - 9.9", "10.0 - 11.9", "12.0 - 13.9", "14.0 or more"),
-    labels_sp = c("0.0 - 8.0", "8.0 - 9.9", "10.0 - 11.9", "12.0 - 13.9", "14.0 o más")
+    labels_en = c("0 - 6.9", "7.0 - 7.9", "8.0 - 8.9", "9.0 - 9.9", "10.0 or more"),
+    labels_sp = c("0 - 6.9", "7.0 - 7.9", "8.0 - 8.9", "9.0 - 9.9", "10.0 o más")
   )
   
   fourthParams <- reactiveValues(
     labels_en = c("0.0 - 1.9", "2.0 - 3.9", "4.0 - 5.9", "6.0 - 7.9", "8.0 - 9.9", "10.0 or more"),
     labels_sp = c("0.0 - 1.9", "2.0 - 3.9", "4.0 - 5.9", "6.0 - 7.9", "8.0 - 9.9", "10.0 o más")
   )
-
+  
   fifthParams <- reactiveValues(
     metric = "Net",
     bins = c(-1000000, -10000, -5000, 0, 5000, 10000, 1000000),
     labels_net_en = c("Fewer than -10,000", "-10,000 - -5,001", "-5,000 - -1", "0 - 4,999", "5,000 - 9,999", "10,000 or more"),
-    labels_out_en = c("0 - 1,999", "2,000 - 3,999", "4,000 - 5,999", "6,000 - 7,999", "8,000 - 9,999", "10,000 or more"),
-    labels_in_en = c("0 - 1,999", "2,000 - 3,999", "4,000 - 5,999", "6,000 - 7,999", "8,000 - 9,999", "10,000 or more"),
+    labels_out_en = c("0 - 14,999", "15,000 - 19,999", "20,000 - 24,999", "25,000 or more"),
+    labels_in_en = c("0 - 14,999", "15,000 - 19,999", "20,000 - 24,999", "25,000 or more"),
     labels_net_sp = c("Menos de -10,000 ", "-10,000 - -5,001", "-5,000 - -1", "0 - 4,999", "5,000 - 9,999", "10,000 o más"),
-    labels_out_sp = c("0 - 1,999", "2,000 - 3,999", "4,000 - 5,999", "6,000 - 7,999", "8,000 - 9,999", "10,000 o más"),
-    labels_in_sp = c("0 - 1,999", "2,000 - 3,999", "4,000 - 5,999", "6,000 - 7,999", "8,000 - 9,999", "10,000 o más"),
+    labels_out_sp = c("0 - 14,999", "15,000 - 19,999", "20,000 - 24,999", "25,000 o más"),
+    labels_in_sp = c("0 - 14,999", "15,000 - 19,999", "20,000 - 24,999", "25,000 o más"),
     legend_title = "Net People",
     palette = "PRGn"
   )
@@ -182,11 +182,11 @@ server <- function(input, output, session) {
       flowParams$labels_net_en
     } else if (r$currentLang == "Spanish" & flowParams$metric == "Net") {
       flowParams$labels_net_sp
-    } else if (r$currentLang == "English" & flowParams$metric == "Out") {
+    } else if (r$currentLang == "English" & flowParams$metric == "Outbound") {
       flowParams$labels_out_en
-    } else if (r$currentLang == "Spanish" & flowParams$metric == "Out") {
+    } else if (r$currentLang == "Spanish" & flowParams$metric == "Outbound") {
       flowParams$labels_out_sp
-    } else if (r$currentLang == "English" & flowParams$metric == "In") {
+    } else if (r$currentLang == "English" & flowParams$metric == "Inbound") {
       flowParams$labels_in_en
     } else {
       flowParams$labels_in_sp
@@ -194,10 +194,10 @@ server <- function(input, output, session) {
   )
   
   sixthParams <- reactiveValues(
-    labels_en = c("0.0 - 3.9", "2.0 - 5.9", "4.0 - 7.9", "8.0 or more"),
-    labels_sp = c("0.0 - 3.9", "2.0 - 5.9", "4.0 - 7.9", "8.0 o más")
+    labels_en = c("0 - 2.9", "3.0 - 3.9", "4.0 - 4.9", "5.0 - 5.9", "6.0 or more"),
+    labels_sp = c("0 - 2.9", "3.0 - 3.9", "4.0 - 4.9", "5.0 - 5.9", "6.0 o más")
   )
-
+  
   seventhParams <- reactiveValues(
     labels_en = c("0.0 - 14.9", "15.0 - 19.9", "20.0 - 24.9", "25.0 - 29.9", "30.0 or more"),
     labels_sp = c("0.0 - 14.9", "15.0 - 19.9", "20.0 - 24.9", "25.0 - 29.9", "30.0 o más")
@@ -227,14 +227,14 @@ server <- function(input, output, session) {
     #metric = "Electric",
     bins = c(0, 85, 90, 95, Inf),
     labels_electric_en = c("0.0 - 84.9", "85.0 - 89.9", "90.0 - 94.9","95.0 or more"),
-    labels_internet_en = c("0.0 - 59.9", "60.0 - 69.9", "70.0 - 79.9","80.0 or more"),
+    labels_internet_en = c("0.0 - 57.4", "57.5 - 64.9", "65.0 - 72.4","72.5 or more"),
     labels_electric_sp = c("0.0 - 84.9", "85.0 - 89.9", "90.0 - 94.9","95.0 o más"),
-    labels_internet_sp = c("0.0 - 59.9", "60.0 - 69.9", "70.0 - 79.9","80.0 o más"),
+    labels_internet_sp = c("0.0 - 57.4", "57.5 - 64.9", "65.0 - 72.4","72.5 o más"),
     legend_title = "Households (Percent)",
     map_labels = "percent of households",
     palette = "YlOrRd"
   )
-
+  
   twelfthParams_labels_disp <- reactive(
     if (r$currentLang == "English" & r$twelfthPage_metric == "electricity") {
       twelfthParams$labels_electric_en
@@ -260,7 +260,14 @@ server <- function(input, output, session) {
   outputOptions(output, "eleventhPage_metric2", suspendWhenHidden = FALSE)
   
   outputOptions(output, "twelfthPage_metric2", suspendWhenHidden = FALSE)
- 
+  
+  
+  #STIC PDF BRIEFS UI###########################################################
+  # See technical_briefs.R for UI specifications; all PDFs in www folder
+  output$briefsPDFView <- renderUI({
+    
+  })
+  
   #FILTER DATA TABLES###########################################################  
   # Reactive data for indicator widgets (right card, adjacent to leaflet maps);
   # and for all ggplots. secondaryText column in dropdownFilteredData for i18n
@@ -399,7 +406,7 @@ server <- function(input, output, session) {
     internal <- filtered_data_from_dropdown_ind_widgets()
     internal <- decimal(internal$LifeExpect,1)
   })
-
+  
   output$firstPage_statistics_text11 <- renderText({
     paste(firstPage_stat11(), i18n$t("years"))
   })
@@ -422,7 +429,7 @@ server <- function(input, output, session) {
     internal <- filtered_data_from_dropdown_ind_widgets()
     internal <- decimal(internal$HHSize,1)
   })
-
+  
   output$secondPage_statistics_text2 <- renderText({
     secondPage_stat2()
   })
@@ -572,7 +579,7 @@ server <- function(input, output, session) {
   })
   
   output$fourthPage_statistics_text2 <- renderText({
-    paste0(fourthPage_stat2(),i18n$t("people"))
+    paste0(fourthPage_stat2()," ",i18n$t("people"))
   })
   # Population with foreign citizenship
   fourthPage_stat3 <- reactive({
@@ -581,7 +588,7 @@ server <- function(input, output, session) {
   })
   
   output$fourthPage_statistics_text3 <- renderText({
-    paste0(fourthPage_stat3(),i18n$t("people"))
+    paste0(fourthPage_stat3()," ",i18n$t("people"))
   })
   # PAGE 4 leaflet map subtitles, reactive based on subtopic button click for 'Metric'
   fourthPage_map_subtitle_topic <- reactive({
@@ -648,7 +655,7 @@ server <- function(input, output, session) {
     internal <- filtered_data_from_dropdown_ind_widgets()
     internal <- comma(internal$IntImmi)
   })
- 
+  
   output$fifthPage_statistics_text5 <- renderText({
     fifthPage_stat5()
   })
@@ -739,7 +746,7 @@ server <- function(input, output, session) {
     internal <- filtered_data_from_dropdown_ind_widgets()
     internal <- decimal(internal$CMortRatio,1)
   })
-
+  
   output$sixthPage_statistics_text4 <- renderText({
     sixthPage_stat4()
   })
@@ -782,7 +789,7 @@ server <- function(input, output, session) {
   })
   
   output$seventhPage_statistics_text4 <- renderText({
-    paste0(seventhPage_stat4()," years")
+    paste0(seventhPage_stat4()," ", i18n$t("years"))
   })
   # sex ratio at birth
   seventhPage_stat5 <- reactive({
@@ -830,7 +837,7 @@ server <- function(input, output, session) {
     internal <- filtered_data_from_dropdown_ind_widgets()
     internal <- comma(internal$SecAttend)
   })
- 
+  
   output$eighthPage_statistics_text4 <- renderText({
     paste0(
       eighthPage_stat4(),
@@ -900,7 +907,7 @@ server <- function(input, output, session) {
   })
   # PAGE 11 leaflet map subtitles, reactive based on subtopic button click for 'Metric'  
   eleventhPage_map_subtitle_topic <- reactive({
-
+    
     if (r$eleventhPage_metric == "water") {
       mapSubtitle <- i18n$t("Piped water inside the unit")
     } else if (r$eleventhPage_metric == "sanitation") {
@@ -973,7 +980,7 @@ server <- function(input, output, session) {
   output$twelfthPage_map_title <- renderText({
     twelfthPage_map_title_topic()
   })
-
+  
   #FOCUS BUTTONS################################################################
   # The follow buttons appear on the left-hand navigation under "Select a subtopic".
   # When the user clicks one of these buttons, the follow code observes the click,
@@ -985,7 +992,7 @@ server <- function(input, output, session) {
     r$thirdPage_focused_dataset <- imported_data %>%
       filter(Type == "DisabilityRate" & Metric == "Walking" & Level == "ADM1")
   })
-      
+  
   observeEvent(input$seeing_button, {
     r$thirdPage_focused_dataset <- imported_data %>%
       filter(Type == "DisabilityRate" & Metric == "Seeing" & Level == "ADM1")
@@ -1070,15 +1077,165 @@ server <- function(input, output, session) {
   observeEvent(input$ICT_button, {
     r$twelfthPage_metric <- "ICT"
   })
-
+  
+  #DATA TABLE VIEW FOR THE CENSUS DATA##########################################
+  # The code below renders data tables on the Upload page for users to inspect
+  # the data they have provided to OSDS.
+  
+  # ASPATIAL DATA###############################################################
+  output$DT_narrow <- DT::renderDataTable({
+    req(imported_data)
+    
+    datatable(
+      imported_data,
+      options = list(scrollX = TRUE))
+  })
+  
+  output$DT_wide <- DT::renderDataTable({
+    req(imported_data_wide_all)
+    
+    datatable(
+      imported_data_wide_all,
+      options = list(scrollX = TRUE))
+  })
+  
+  output$DT_migration <- DT::renderDataTable({
+    req(imported_migration_data)
+    
+    datatable(
+      imported_migration_data,
+      options = list(scrollX = TRUE))
+  })
+  # SPATIAL DATA################################################################
+  output$upload_page_map_table_0 <- DT::renderDataTable({
+    req(temp0)
+    
+    datatable(
+      temp0,
+      options = list(scrollX = TRUE))
+  })
+  
+  output$upload_page_map_table_1 <- DT::renderDataTable({
+    req(temp1)
+    
+    datatable(
+      temp1,
+      options = list(scrollX = TRUE))
+  })
+  
+  output$upload_page_map_table_2 <- DT::renderDataTable({
+    req(temp2)
+    
+    datatable(
+      temp2,
+      options = list(scrollX = TRUE))
+  })
+  
   #LEAFLET MAPS BY PAGE#########################################################
   # The code below produces leaflet maps for each page (1-12) and the upload and 
   # homepages of OSDS.
   
+  # UPLOAD PAGE MAPS############################################################
+  # ADM0
+  output$upload_page_map_0 <- leaflet::renderLeaflet({
+    
+    leaflet() %>%
+      addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
+      setMapWidgetStyle(list(background = "white"))
+    
+  })
+  # ADM1
+  output$upload_page_map_1 <- leaflet::renderLeaflet({
+    
+    leaflet() %>%
+      addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
+      setMapWidgetStyle(list(background = "white"))
+    
+  })
+  # ADM2
+  output$upload_page_map_2 <- leaflet::renderLeaflet({
+    
+    leaflet() %>%
+      addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
+      setMapWidgetStyle(list(background = "white"))
+    
+  })
+  
+  output$upload_page_nso_map <- leaflet::renderLeaflet({
+    
+    leaflet() %>%
+      addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
+      setMapWidgetStyle(list(background = "white")) 
+  })
+  
+  
+  observeEvent(input$adm0_chk, {
+    
+    leafletProxy("upload_page_nso_map", data = sf_ADM_0) %>%
+      clearMarkers() %>%
+      clearShapes() %>%
+      clearControls() %>%
+      addPolygons(color = "#444444",
+                  weight = 1,
+                  opacity = 1,
+                  fillOpacity = 0.8,
+                  fillColor = "#F4D06F",
+                  highlightOptions = highlightOptions(color = "white",
+                                                      weight = 3,
+                                                      bringToFront = TRUE)) %>%
+      setView(lng = mean(st_bbox(sf_ADM_0)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_0)[c(2,4)]),
+              zoom = 6) %>%
+      setMapWidgetStyle(list(background = "white")) %>%
+      addFullscreenControl()
+  })
+  
+  observeEvent(input$adm1_chk, {
+    
+    leafletProxy("upload_page_nso_map", data = sf_ADM_1) %>%
+      clearMarkers() %>%
+      clearShapes() %>%
+      clearControls() %>%
+      addPolygons(color = "#444444",
+                  weight = 1,
+                  opacity = 1,
+                  fillOpacity = 0.8,
+                  fillColor = "#F4D06F",
+                  highlightOptions = highlightOptions(color = "white",
+                                                      weight = 3,
+                                                      bringToFront = TRUE)) %>%
+      setView(lng = mean(st_bbox(sf_ADM_1)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_1)[c(2,4)]),
+              zoom = 6) %>%
+      setMapWidgetStyle(list(background = "white")) %>%
+      addFullscreenControl()
+  })
+  
+  observeEvent(input$adm2_chk, {
+    
+    leafletProxy("upload_page_nso_map", data = sf_ADM_2) %>%
+      clearMarkers() %>%
+      clearShapes() %>%
+      clearControls() %>%
+      addPolygons(color = "#444444",
+                  weight = 1,
+                  opacity = 1,
+                  fillOpacity = 0.8,
+                  fillColor = "#F4D06F",
+                  highlightOptions = highlightOptions(color = "white",
+                                                      weight = 3,
+                                                      bringToFront = TRUE)) %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 6) %>%
+      setMapWidgetStyle(list(background = "white")) %>%
+      addFullscreenControl()
+  })
+  
   #Landing page MAP#############################################################
   # Population dot density map
   output$landing_page_map <- renderLeaflet({
-
+    req(input$dropdown)
     landing_page_map_internal <- leaflet() %>%
       addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
       addCircles(data = pop_dots_data,
@@ -1094,26 +1251,21 @@ server <- function(input, output, session) {
         labels = i18n$t("one dot = 500 people"),
         opacity = 1,
         position = "bottomleft") %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4,
+                   opacity = 0.8,
+                   color = "#9e9ac8",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
   
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("landing_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
-  })
-  
   #PAGE 1: Demographic & Social MAPS############################################
   # Population by municipality
-  first_page_map_bins <- c(0, 20000, 40000, 80000, 100000, Inf)
+  first_page_map_bins <- c(0, 15000, 30000, 45000, 60000, Inf)
   
   first_page_map_pal <- colorBin("YlGn", domain = sf_ADM_2$Pop, bins = first_page_map_bins)
   
@@ -1127,7 +1279,6 @@ server <- function(input, output, session) {
   # Render the map polygons, basemap, labels, and legend
   output$first_page_map <- renderLeaflet({
     req(input$dropdown)
-    
     first_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       sf_ADM_2$ADM1, sf_ADM_2$ADM2, sf_ADM_2$Pop, i18n$t("people")) %>%
@@ -1153,27 +1304,21 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(first_map_labels())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("first_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select")
-  })
   
   # PAGE 2: Household & Family Maps#############################################
   # Average household size by municipality
-  second_page_map_bins <- c(0, 2, 4, 6, 8, Inf)
+  second_page_map_bins <- c(0, 1.5, 3, 4.5, 6, Inf)
   
   second_map_labels <- reactive(
     if (r$currentLang == "English") {
@@ -1184,9 +1329,9 @@ server <- function(input, output, session) {
   )
   
   second_page_map_pal <- colorBin("Purples", domain = sf_ADM_2$HHSize, bins = second_page_map_bins)
- 
+  
   output$second_page_map <- renderLeaflet({
-    
+    req(input$dropdown)
     second_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       sf_ADM_2$ADM1, sf_ADM_2$ADM2, sf_ADM_2$HHSize, i18n$t("people")) %>% 
@@ -1204,32 +1349,26 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = second_page_map_labels) %>%
       addLegend_decreasing(pal=second_page_map_pal, 
-                values = sf_ADM_2$HHSize, 
-                opacity = 0.7, 
-                title = i18n$t("Average Household Size"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(second_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+                           values = sf_ADM_2$HHSize, 
+                           opacity = 0.7, 
+                           title = i18n$t("Average Household Size"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(second_map_labels())
+                           }) %>%
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl() 
-    })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel  
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("second_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
   })
-    
+  
   # PAGE 3: Disability Status MAPS##############################################
   # Prevalence rate of population with at least some difficulty in a given subtopic by municipality
   third_map_labels <- reactive(
@@ -1240,54 +1379,48 @@ server <- function(input, output, session) {
     }
   )
   
-  third_page_map_bins <- c(6, 8, 10, 12, 14, Inf)
+  third_page_map_bins <- c(6, 7, 8, 9, 10, Inf)
   # Render the map polygons, basemap, labels, and legend   
   output$third_page_map <- renderLeaflet({
-
-      third_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$ThirdShow, bins = third_page_map_bins)
-      
-      third_page_map_labels <- sprintf(
-        "<strong>%s </strong><br/>%s<br/>%g %s",
-        r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$ThirdShow, i18n$t("percent prevalence, people with at least some difficulty")) %>% 
-        lapply(htmltools::HTML)
-
-      third_page_map_internal <- leaflet() %>%
-        addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
-        addPolygons(data = r$reactive_sf_ADM_2,
-                    fillColor = ~third_page_map_pal(ThirdShow),
-                    weight = 1,
-                    fillOpacity = 0.8,
-                    color = "white",
-                    highlightOptions = highlightOptions(color = "white",
-                                                        weight = 3,
-                                                        bringToFront = TRUE),
-                    label = third_page_map_labels) %>%
-        addLegend_decreasing(pal=third_page_map_pal, 
-                  values = r$reactive_sf_ADM_2$ThirdShow, 
-                  opacity = 0.7, 
-                  title = i18n$t("Prevalence Rate"),
-                  decreasing = TRUE,
-                  position = "bottomright",
-                  labFormat = function(type, cuts, p) {
-                    paste0(third_map_labels())
-                    }) %>%
-        setView(lng = -90,
-                lat = 16,
-                zoom = 7) %>%
-        setMapWidgetStyle(list(background = "white")) %>%
-        addFullscreenControl()
-
-    })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel    
-  observeEvent(input$dropdown, {
+    req(input$dropdown)
+    third_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$ThirdShow, bins = third_page_map_bins)
     
-    leafletProxy("third_page_map", session) %>%
-      removeShape("select") %>% 
+    third_page_map_labels <- sprintf(
+      "<strong>%s </strong><br/>%s<br/>%g %s",
+      r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$ThirdShow, i18n$t("percent prevalence, people with at least some difficulty")) %>% 
+      lapply(htmltools::HTML)
+    
+    third_page_map_internal <- leaflet() %>%
+      addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
+      addPolygons(data = r$reactive_sf_ADM_2,
+                  fillColor = ~third_page_map_pal(ThirdShow),
+                  weight = 1,
+                  fillOpacity = 0.8,
+                  color = "white",
+                  highlightOptions = highlightOptions(color = "white",
+                                                      weight = 3,
+                                                      bringToFront = TRUE),
+                  label = third_page_map_labels) %>%
+      addLegend_decreasing(pal=third_page_map_pal, 
+                           values = r$reactive_sf_ADM_2$ThirdShow, 
+                           opacity = 0.7, 
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
-                   layerId = "select") 
+                   layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
+      setMapWidgetStyle(list(background = "white")) %>%
+      addFullscreenControl()
+    
   })
   
   # Update map with selected disability subtopic: WALKING
@@ -1315,21 +1448,22 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1337,7 +1471,7 @@ server <- function(input, output, session) {
   
   # Update map with selected disability subtopic: SEEING  
   observeEvent(input$seeing_button, {
-
+    
     r$reactive_sf_ADM_2$ThirdShow <- r$reactive_sf_ADM_2$SeeRate
     
     third_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$ThirdShow, bins = third_page_map_bins)
@@ -1360,29 +1494,30 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
-
+    
   })
   
   # Update map with selected disability subtopic: HEARING  
   observeEvent(input$hearing_button, {
-
+    
     r$reactive_sf_ADM_2$ThirdShow <- r$reactive_sf_ADM_2$HearRate
     
     third_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$ThirdShow, bins = third_page_map_bins)
@@ -1405,26 +1540,27 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
   })
-
+  
   # Update map with selected disability subtopic: COGNITION  
   observeEvent(input$cognition_button, {
     
@@ -1450,29 +1586,30 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
   })
-
+  
   # Update map with selected disability subtopic: SELFCARE  
   observeEvent(input$selfcare_button, {
-
+    
     r$reactive_sf_ADM_2$ThirdShow <- r$reactive_sf_ADM_2$SelfcaRate
     
     third_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$ThirdShow, bins = third_page_map_bins)
@@ -1495,26 +1632,27 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
   })
-
+  
   # Update map with selected disability subtopic: COMMUNICATION  
   observeEvent(input$communication_button, {
     
@@ -1540,26 +1678,27 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = third_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=third_page_map_pal,
-                values = ~r$reactive_sf_ADM_2$ThirdShow,
-                opacity = 0.7,
-                title = i18n$t("Prevalence Rate"),
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(third_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=third_page_map_pal,
+                           values = ~r$reactive_sf_ADM_2$ThirdShow,
+                           opacity = 0.7,
+                           title = i18n$t("Prevalence Rate"),
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(third_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
   })
-
+  
   # PAGE 4: International Migration MAPS########################################
   # International migrant population by municipality and subtopic
   fourth_map_labels <- reactive(
@@ -1573,8 +1712,8 @@ server <- function(input, output, session) {
   fourth_page_map_bins <- c(0, 2, 4, 6, 8, 10, Inf)
   # Render the map polygons, basemap, labels, and legend    
   output$fourth_page_map <- renderLeaflet({
-    
-    fourth_page_map_pal <- colorBin("Greens", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
+    req(input$dropdown)
+    fourth_page_map_pal <- colorBin("YlGn", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
     
     fourth_page_map_labels <- sprintf(
       "<strong>%s</strong><br/>%s<br/>%g %s",
@@ -1593,30 +1732,31 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = fourth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=fourth_page_map_pal, 
-                values = r$reactive_sf_ADM_2$FourthShow, 
-                opacity = 0.7, 
-                title = i18n$t("Percent of Population"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(fourth_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=fourth_page_map_pal, 
+                           values = r$reactive_sf_ADM_2$FourthShow, 
+                           opacity = 0.7, 
+                           title = i18n$t("Percent of Population"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(fourth_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
   # Update map with selected international migration subtopic: FOREIGN BORN    
   observeEvent(input$fborn_button, {
-
+    
     r$reactive_sf_ADM_2$FourthShow <- r$reactive_sf_ADM_2$FBRate
     
-    fourth_page_map_pal <- colorBin("Greens", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
+    fourth_page_map_pal <- colorBin("YlGn", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
     
     fourth_page_map_labels <- sprintf(
       "<strong>%s</strong><br/>%s<br/>%g %s",
@@ -1636,21 +1776,22 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = fourth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=fourth_page_map_pal, 
-                values = ~r$reactive_sf_ADM_2$FourthShow, 
-                opacity = 0.7, 
-                title = i18n$t("Percent of Population"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(fourth_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=fourth_page_map_pal, 
+                           values = ~r$reactive_sf_ADM_2$FourthShow, 
+                           opacity = 0.7, 
+                           title = i18n$t("Percent of Population"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(fourth_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
@@ -1659,7 +1800,7 @@ server <- function(input, output, session) {
     
     r$reactive_sf_ADM_2$FourthShow <- r$reactive_sf_ADM_2$FCitizRate
     
-    fourth_page_map_pal <- colorBin("Greens", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
+    fourth_page_map_pal <- colorBin("YlGn", domain = r$reactive_sf_ADM_2$FourthShow, bins = fourth_page_map_bins)
     
     fourth_page_map_labels <- sprintf(
       "<strong>%s</strong><br/>%s<br/>%g %s",
@@ -1679,21 +1820,22 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      addLegend_decreasing(pal=fourth_page_map_pal, 
-                values = ~r$reactive_sf_ADM_2$FourthShow, 
-                opacity = 0.7, 
-                title = i18n$t("Percent of Population"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(fourth_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
+      addLegend_decreasing(pal=fourth_page_map_pal, 
+                           values = ~r$reactive_sf_ADM_2$FourthShow, 
+                           opacity = 0.7, 
+                           title = i18n$t("Percent of Population"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(fourth_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
@@ -1704,7 +1846,7 @@ server <- function(input, output, session) {
   output$fifth_page_map_national <- renderLeaflet({
     
     fifth_page_map_national_pal <- colorBin(palette = fifthParams$palette, domain = r$reactive_sf_ADM_2$FifthShow, bins = fifthParams$bins)
-
+    
     fifth_page_map_labels <- sprintf(
       "<strong>%s</strong><br/>%s<br/>%g %s",
       r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$FifthShow, i18n$t("people")) %>%
@@ -1722,9 +1864,13 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = fifth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_map_national_pal, 
                            values = r$reactive_sf_ADM_2$FifthShow, 
                            opacity = 0.7, 
@@ -1734,9 +1880,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(fifthParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1774,9 +1917,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_map_national_pal, 
                            values = ~r$reactive_sf_ADM_2$FifthShow, 
                            opacity = 0.7, 
@@ -1786,9 +1933,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(fifthParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1798,7 +1942,7 @@ server <- function(input, output, session) {
     
     r$reactive_sf_ADM_2$FifthShow <- r$reactive_sf_ADM_2$DomIn
     
-    fifthParams$bins = c(0, 5000, 10000, 15000, 20000, 25000, Inf)
+    fifthParams$bins = c(10000, 15000, 20000, 25000, Inf)
     
     fifthParams$metric = "In"
     
@@ -1826,9 +1970,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_map_national_pal, 
                            values = ~r$reactive_sf_ADM_2$FifthShow, 
                            opacity = 0.7, 
@@ -1838,9 +1986,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(fifthParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1850,7 +1995,7 @@ server <- function(input, output, session) {
     
     r$reactive_sf_ADM_2$FifthShow <- r$reactive_sf_ADM_2$DomOut
     
-    fifthParams$bins = c(0, 5000, 10000, 15000, 20000, 25000, Inf)
+    fifthParams$bins = c(10000, 15000, 20000, 25000, Inf)
     
     fifthParams$metric = "Out"
     
@@ -1878,9 +2023,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_map_national_pal, 
                            values = ~r$reactive_sf_ADM_2$FifthShow, 
                            opacity = 0.7, 
@@ -1890,9 +2039,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(fifthParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1900,23 +2046,23 @@ server <- function(input, output, session) {
   # Domestic migration flows by municipality (ADM1)
   # Render the map polygons, basemap, labels, and legend   
   output$fifth_page_map_flows <- renderLeaflet({
-
+    
     #Primary is origin, secondary is destination
     if(input$dropdown == "All"){
       
       sf_mig <- sf_ADM_1
       sf_mig$Migrants <- NA
     } else {
-    mig_filtered_flows <-  imported_migration_data %>% 
-      dplyr::filter(Primary == input$dropdown) %>% 
-      dplyr::select(Secondary, Net, Inbound, Outbound) %>% 
-      pivot_longer(cols = 2:4, names_to = "Metric", values_to = "Migrants") %>% 
-      dplyr::filter(Metric == flowParams$metric)
-    
-    sf_mig <- merge(sf_ADM_1, mig_filtered_flows, by.x = "ADM1", by.y = "Secondary")
-    
+      mig_filtered_flows <-  imported_migration_data %>% 
+        dplyr::filter(Primary == input$dropdown) %>% 
+        dplyr::select(Secondary, Net, Inbound, Outbound) %>% 
+        pivot_longer(cols = 2:4, names_to = "Metric", values_to = "Migrants") %>% 
+        dplyr::filter(Metric == flowParams$metric)
+      
+      sf_mig <- merge(sf_ADM_1, mig_filtered_flows, by.x = "ADM1", by.y = "Secondary")
+      
     }
-
+    
     fifth_page_flow_map_pal <- colorBin(flowParams$palette, domain = sf_mig$Migrants, bins = flowParams$bins)
     
     fifth_page_map_labels <- sprintf(
@@ -1936,9 +2082,13 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = fifth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_flow_map_pal,
                            values = sf_mig$Migrants,
                            opacity = 0.7,
@@ -1949,9 +2099,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(flowParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -1985,7 +2132,7 @@ server <- function(input, output, session) {
     }
     
     fifth_page_flow_map_pal <- colorBin(flowParams$palette, domain = sf_mig$Migrants, bins = flowParams$bins)
-
+    
     fifth_page_map_labels <- sprintf(
       "<strong>%s</strong><br/>%g %s",
       sf_mig$ADM1, sf_mig$Migrants, i18n$t("people")) %>%
@@ -2004,9 +2151,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_flow_map_pal, 
                            values = ~sf_mig$Migrants, 
                            opacity = 0.7, 
@@ -2017,9 +2168,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(flowParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -2072,9 +2220,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_flow_map_pal, 
                            values = ~sf_mig$Migrants, 
                            opacity = 0.7, 
@@ -2085,9 +2237,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(flowParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -2140,9 +2289,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE)) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
+              zoom = 7) %>%
       addLegend_decreasing(pal=fifth_page_flow_map_pal, 
                            values = ~sf_mig$Migrants, 
                            opacity = 0.7, 
@@ -2153,9 +2306,6 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(flowParams_labels_disp())
                            }) %>%
-      setView(lng = -90,
-              lat = 16,
-              zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
@@ -2163,7 +2313,7 @@ server <- function(input, output, session) {
   
   # PAGE 6: Mortality MAPS######################################################
   # Crude death rate by municipality
-  sixth_page_map_bins <- c(0, 4, 6, 8, Inf)
+  sixth_page_map_bins <- c(2, 3, 4, 5, 6, Inf)
   
   sixth_map_labels <- reactive(
     if (r$currentLang == "English") {
@@ -2172,7 +2322,7 @@ server <- function(input, output, session) {
       sixth_map_labels <- sixthParams$labels_sp
     }
   )
-
+  
   sixth_page_map_pal <- colorBin("YlOrRd", domain = sf_ADM_2$CDeathRate, bins = sixth_page_map_bins)
   # Render the map polygons, basemap, labels, and legend   
   output$sixth_page_map <- renderLeaflet({
@@ -2181,7 +2331,7 @@ server <- function(input, output, session) {
       "<strong>%s </strong><br/>%s<br/>%g %s",
       sf_ADM_2$ADM1, sf_ADM_2$ADM2, sf_ADM_2$CDeathRate, i18n$t("deaths")) %>% 
       lapply(htmltools::HTML)
-
+    
     sixth_page_map_internal <- leaflet() %>%
       addProviderTiles("CartoDB.DarkMatter", layerId = "basetile",options = providerTileOptions(minZoom = 6)) %>%
       addPolygons(data = sf_ADM_2,
@@ -2193,8 +2343,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE),
                   label = sixth_page_map_labels) %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=sixth_page_map_pal, 
                            values = sf_ADM_2$CDeathRate, 
@@ -2205,20 +2360,9 @@ server <- function(input, output, session) {
                            labFormat = function(type, cuts, p) {
                              paste0(sixth_map_labels())
                            }) %>%
-     setMapWidgetStyle(list(background = "white")) %>%
+      setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
-  })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel     
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("sixth_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
   })
   
   # PAGE 7: Fertility MAPS######################################################
@@ -2233,7 +2377,7 @@ server <- function(input, output, session) {
   
   seventh_page_map_bins <- c(0, 15, 20, 25, 30, Inf)
   
-  seventh_page_map_pal <- colorBin("Greens", domain = sf_ADM_2$CBRate, bins = seventh_page_map_bins)
+  seventh_page_map_pal <- colorBin("YlGn", domain = sf_ADM_2$CBRate, bins = seventh_page_map_bins)
   # Render the map polygons, basemap, labels, and legend    
   output$seventh_page_map <- renderLeaflet({
     
@@ -2253,8 +2397,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE),
                   label = seventh_page_map_labels) %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=seventh_page_map_pal, 
                            values = sf_ADM_2$CBRate, 
@@ -2268,17 +2417,6 @@ server <- function(input, output, session) {
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
     
-  })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel     
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("seventh_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
   })
   
   # PAGE 8: Education MAPS######################################################
@@ -2294,9 +2432,9 @@ server <- function(input, output, session) {
   eighth_page_map_bins <- c(0, 75, 80, 85, 90, Inf)
   # Render the map polygons, basemap, labels, and legend      
   output$eighth_page_map <- renderLeaflet({
-
+    
     eighth_page_map_pal <- colorBin("Purples", domain = r$reactive_sf_ADM_2$EighthShow, bins = eighth_page_map_bins)
-
+    
     eighth_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$EighthShow, i18n$t("percent literacy")) %>% 
@@ -2317,11 +2455,12 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eighth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=eighth_page_map_pal, 
                            values = r$reactive_sf_ADM_2$EighthShow, 
@@ -2361,11 +2500,12 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eighth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=eighth_page_map_pal,
                            values = ~r$reactive_sf_ADM_2$EighthShow,
@@ -2405,11 +2545,12 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eighth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=eighth_page_map_pal,
                            values = ~r$reactive_sf_ADM_2$EighthShow,
@@ -2445,8 +2586,8 @@ server <- function(input, output, session) {
     ninth_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       sf_ADM_2$ADM1, sf_ADM_2$ADM2, sf_ADM_2$UnemployRa, i18n$t("percent unemployment")) %>% 
-    lapply(htmltools::HTML)
-  
+      lapply(htmltools::HTML)
+    
     ninth_page_map_internal <- leaflet() %>%
       addProviderTiles("CartoDB.DarkMatter", 
                        layerId = "basetile",
@@ -2460,8 +2601,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE),
                   label = ninth_page_map_labels) %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=ninth_page_map_pal, 
                            values = sf_ADM_2$UnemployRa, 
@@ -2475,17 +2621,6 @@ server <- function(input, output, session) {
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   }) 
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel    
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("ninth_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
-  })
   
   # PAGE 10: Housing MAPS#######################################################
   # Housing unit count by municipality
@@ -2499,7 +2634,7 @@ server <- function(input, output, session) {
   
   tenth_page_map_bins <- c(0, 4000, 8000, 12000, 16000, Inf)
   
-  tenth_page_map_pal <- colorBin("Greens", domain = sf_ADM_2$HUnits, bins = tenth_page_map_bins)
+  tenth_page_map_pal <- colorBin("YlGn", domain = sf_ADM_2$HUnits, bins = tenth_page_map_bins)
   # Render the map polygons, basemap, labels, and legend   
   output$tenth_page_map <- renderLeaflet({
     req(sf_ADM_2)
@@ -2508,7 +2643,7 @@ server <- function(input, output, session) {
       "<strong>%s </strong><br/>%s<br/>%g %s",
       sf_ADM_2$ADM1, sf_ADM_2$ADM2, sf_ADM_2$HUnits, i18n$t("housing units")) %>% 
       lapply(htmltools::HTML)
-
+    
     tenth_page_map_internal <- leaflet() %>%
       addProviderTiles("CartoDB.DarkMatter", 
                        layerId = "basetile",
@@ -2523,8 +2658,13 @@ server <- function(input, output, session) {
                                                       weight = 3,
                                                       bringToFront = TRUE),
                   label = tenth_page_map_labels) %>%
-      setView(lng = -90,
-              lat = 16,
+      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>% 
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=tenth_page_map_pal, 
                            values = sf_ADM_2$HUnits, 
@@ -2537,17 +2677,6 @@ server <- function(input, output, session) {
                            }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
-  })
-  # Update map with selected ADM1 polylines overlayed when a location is selected
-  # from the controls panel  
-  observeEvent(input$dropdown, {
-    
-    leafletProxy("tenth_page_map", session) %>%
-      removeShape("select") %>% 
-      addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
-                   color = "white",
-                   layerId = "select") 
   })
   
   # PAGE 11: Water, Sanitation, & Hygiene MAPS##################################
@@ -2563,9 +2692,9 @@ server <- function(input, output, session) {
   eleventh_page_map_bins <- c(0, 75, 80, 85, 90, Inf)
   # Render the map polygons, basemap, labels, and legend    
   output$eleventh_page_map <- renderLeaflet({
-  
+    
     eleventh_page_map_pal <- colorBin("Purples", domain = r$reactive_sf_ADM_2$EleventhSh, bins = eleventh_page_map_bins)
-      
+    
     eleventh_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$EleventhSh, i18n$t("percent of households with amenity")) %>% 
@@ -2583,21 +2712,22 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eleventh_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=eleventh_page_map_pal, 
-                values = r$reactive_sf_ADM_2$EleventhSh, 
-                opacity = 0.7, 
-                title = i18n$t("Housing Units (Percent)"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(eleventh_map_labels())
-                }) %>%
+                           values = r$reactive_sf_ADM_2$EleventhSh, 
+                           opacity = 0.7, 
+                           title = i18n$t("Housing Units (Percent)"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(eleventh_map_labels())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
@@ -2626,20 +2756,21 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eleventh_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
       addLegend_decreasing(pal=eleventh_page_map_pal, 
-                values = r$reactive_sf_ADM_2$EleventhSh, 
-                opacity = 0.7, 
-                title = i18n$t("Housing Units (Percent)"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(eleventh_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+                           values = r$reactive_sf_ADM_2$EleventhSh, 
+                           opacity = 0.7, 
+                           title = i18n$t("Housing Units (Percent)"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(eleventh_map_labels())
+                           }) %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
@@ -2669,20 +2800,21 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eleventh_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
       addLegend_decreasing(pal=eleventh_page_map_pal, 
-                values = r$reactive_sf_ADM_2$EleventhSh, 
-                opacity = 0.7, 
-                title = i18n$t("Housing Units (Percent)"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(eleventh_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+                           values = r$reactive_sf_ADM_2$EleventhSh, 
+                           opacity = 0.7, 
+                           title = i18n$t("Housing Units (Percent)"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(eleventh_map_labels())
+                           }) %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
@@ -2712,20 +2844,21 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = eleventh_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
       addLegend_decreasing(pal=eleventh_page_map_pal, 
-                values = r$reactive_sf_ADM_2$EleventhSh, 
-                opacity = 0.7, 
-                title = i18n$t("Housing Units (Percent)"), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(eleventh_map_labels())
-                }) %>%
-      setView(lng = -90,
-              lat = 16,
+                           values = r$reactive_sf_ADM_2$EleventhSh, 
+                           opacity = 0.7, 
+                           title = i18n$t("Housing Units (Percent)"), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(eleventh_map_labels())
+                           }) %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
@@ -2754,11 +2887,12 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = twelfth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                 weight = 6,
-                 color = "white",
-                 layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+                   weight = 4, 
+                   opacity = 0.8,
+                   color = "white",
+                   layerId = "select") %>%
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=twelfth_page_map_pal, 
                            values = r$reactive_sf_ADM_2$TwelfthSho, 
@@ -2774,9 +2908,9 @@ server <- function(input, output, session) {
   })
   # Update map with selected power & technology subtopic: ELECTRICITY    
   observeEvent(input$electricity_button, {
-
+    
     r$reactive_sf_ADM_2$TwelfthSho <- r$reactive_sf_ADM_2$Electric
-
+    
     twelfthParams$bins = c(0, 85, 90, 95, Inf)
     
     twelfthParams$legend_title = "Households (Percent)"
@@ -2784,14 +2918,14 @@ server <- function(input, output, session) {
     twelfthParams$palette = "YlOrRd"
     
     twelfthParams$map_labels = "percent of households"
-
+    
     twelfth_page_map_pal <- colorBin(palette = twelfthParams$palette, domain = r$reactive_sf_ADM_2$TwelfthSho, bins = twelfthParams$bins)
-
+    
     twelfth_page_map_labels <- sprintf(
       "<strong>%s </strong><br/>%s<br/>%g %s",
       r$reactive_sf_ADM_2$ADM1, r$reactive_sf_ADM_2$ADM2, r$reactive_sf_ADM_2$TwelfthSho, i18n$t(twelfthParams$map_labels)) %>% 
       lapply(htmltools::HTML)
-
+    
     leafletProxy("twelfth_page_map", data = r$reactive_sf_ADM_2) %>%
       clearMarkers() %>%
       clearShapes() %>%
@@ -2805,21 +2939,22 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = twelfth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=twelfth_page_map_pal, 
-                values = r$reactive_sf_ADM_2$TwelfthSho, 
-                opacity = 0.7, 
-                title = i18n$t(twelfthParams$legend_title), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(twelfthParams_labels_disp())
-                }) %>%
+                           values = r$reactive_sf_ADM_2$TwelfthSho, 
+                           opacity = 0.7, 
+                           title = i18n$t(twelfthParams$legend_title), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(twelfthParams_labels_disp())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
@@ -2828,14 +2963,14 @@ server <- function(input, output, session) {
     
     r$reactive_sf_ADM_2$TwelfthSho <- r$reactive_sf_ADM_2$Internet
     
-    twelfthParams$bins = c(0, 60, 70, 80, Inf)
-
+    twelfthParams$bins = c(0, 57.5, 65, 72.5, Inf)
+    
     twelfthParams$legend_title = "Households (Percent)"
     
     twelfthParams$palette = "YlOrRd"
     
     twelfthParams$map_labels = "percent of households"
-
+    
     twelfth_page_map_pal <- colorBin("YlOrRd", domain = r$reactive_sf_ADM_2$TwelfthSho, bins = twelfthParams$bins)
     
     twelfth_page_map_labels <- sprintf(
@@ -2856,21 +2991,22 @@ server <- function(input, output, session) {
                                                       bringToFront = TRUE),
                   label = twelfth_page_map_labels) %>%
       addPolylines(data = sf_ADM1_p[sf_ADM1_p$ADM1 == input$dropdown,c("geometry")],
-                   weight = 6,
+                   weight = 4, 
+                   opacity = 0.8,
                    color = "white",
                    layerId = "select") %>%
-      setView(lng = -90,
-              lat = 16,
+      setView(lng = mean(st_bbox(sf_ADM_2)[c(1,3)]),
+              lat = mean(st_bbox(sf_ADM_2)[c(2,4)]),
               zoom = 7) %>%
       addLegend_decreasing(pal=twelfth_page_map_pal, 
-                values = r$reactive_sf_ADM_2$TwelfthSho, 
-                opacity = 0.7, 
-                title = i18n$t(twelfthParams$legend_title), 
-                decreasing = TRUE,
-                position = "bottomright",
-                labFormat = function(type, cuts, p) {
-                  paste0(twelfthParams_labels_disp())
-                }) %>%
+                           values = r$reactive_sf_ADM_2$TwelfthSho, 
+                           opacity = 0.7, 
+                           title = i18n$t(twelfthParams$legend_title), 
+                           decreasing = TRUE,
+                           position = "bottomright",
+                           labFormat = function(type, cuts, p) {
+                             paste0(twelfthParams_labels_disp())
+                           }) %>%
       setMapWidgetStyle(list(background = "white")) %>%
       addFullscreenControl()
   })
@@ -2883,7 +3019,7 @@ server <- function(input, output, session) {
   output$firstPage_Pop_ADM1Plot <- renderPlot({
     
     req(imported_data, input$dropdown)
-
+    
     a <- imported_data %>%
       filter(Metric == "Population" & Level == "ADM1" & Type == "Total") %>%
       mutate(ADM1 = fct_reorder(ADM1, Value)) %>%
@@ -2903,23 +3039,24 @@ server <- function(input, output, session) {
     } else {
       a
     }
+    
   })
   
   # Population by Sex
-    output$firstPage_Sex <- renderPlot({
-      req(r$currentLang, input$dropdown, dropdownFilteredData())
-      
-      if(input$dropdown == "All") {
-        selectedLocation <- "Guatemala" 
-      } else {
-        selectedLocation <- input$dropdown
-      }
-      
-      firstPage_Sex_Title <- sprintf(
-        "%s, %s 2018",
-        i18n$t("Population by Sex"), selectedLocation) %>%
-        lapply(htmltools::HTML)
-      
+  output$firstPage_Sex <- renderPlot({
+    req(r$currentLang, input$dropdown, dropdownFilteredData())
+    
+    if(input$dropdown == "All") {
+      selectedLocation <- "Guatemala" 
+    } else {
+      selectedLocation <- input$dropdown
+    }
+    
+    firstPage_Sex_Title <- sprintf(
+      "%s, %s 2018",
+      i18n$t("Population by Sex"), selectedLocation) %>%
+      lapply(htmltools::HTML)
+    
     sexPlot <- dropdownFilteredData() %>%
       filter(Metric == "Population" & Type %in% c("Male", "Female")) %>%
       ggplot(aes(x = secondaryText, y = Value/100000, fill = secondaryText)) +
@@ -2934,7 +3071,7 @@ server <- function(input, output, session) {
     
     sexPlot
   })
-
+  
   # Population by age  
   output$firstPage_Age <- renderPlot({
     req(input$dropdown, dropdownFilteredData())
@@ -3017,7 +3154,7 @@ server <- function(input, output, session) {
       filter(Level == "ADM1" & Metric == "Household Size" & Type == "Total") %>%
       mutate(ADM1 = fct_reorder(ADM1, Value)) %>%
       ggplot(aes(x = reorder(ADM1, Value), y = Value)) +
-      geom_bar(fill = "#f2f0f7", stat = "identity", width = 0.8) +
+      geom_bar(fill = "#bcbddc", stat = "identity", width = 0.8) +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       theme(legend.position = "none") +
       ylab(i18n$t("Average Household Size")) +
@@ -3052,7 +3189,7 @@ server <- function(input, output, session) {
     householdTypePlot <- dropdownFilteredData() %>%
       dplyr::filter(Metric == "HHTypes") %>%
       ggplot(aes(x = reorder(secondaryText, Value), y = Value/1000, fill = secondaryText)) +
-      geom_bar(fill = "#dadaeb", stat = "identity", show.legend = FALSE) +
+      geom_bar(fill = "#9e9ac8", stat = "identity", show.legend = FALSE) +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       ggtitle(secondPage_householdType_Title) +
       ylab(i18n$t("Households (in thousands)")) +
@@ -3082,7 +3219,7 @@ server <- function(input, output, session) {
     familyNucleusPlot <- dropdownFilteredData() %>%
       dplyr::filter(Metric == "FamilyNucleus") %>%
       ggplot(aes(x = reorder(secondaryText, Value), y = Value/1000, fill = secondaryText)) +
-      geom_bar(fill = "#9e9ac8", stat = "identity", show.legend = FALSE) +
+      geom_bar(fill = "#807dba", stat = "identity", show.legend = FALSE) +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       ggtitle(secondPage_familyNucleus_Title) +
       ylab(i18n$t("Households (in thousands)")) +
@@ -3112,7 +3249,7 @@ server <- function(input, output, session) {
     maritalStatusPlot <- dropdownFilteredData() %>%
       dplyr::filter(Metric == "MaritalStatus") %>%
       ggplot(aes(x = reorder(secondaryText, Value), y = Value/100000, fill = secondaryText)) +
-      geom_bar(fill = "#756bb1", stat = "identity", show.legend = FALSE) +
+      geom_bar(fill = "#6a51a3", stat = "identity", show.legend = FALSE) +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       # scale_x_discrete(labels = c("Married Separated" = "Separated")) +
       ggtitle(secondPage_maritalStatus_Title) +
@@ -3151,7 +3288,7 @@ server <- function(input, output, session) {
       theme(legend.position = "none") +
       theme_plot() +
       coord_flip()
-
+    
     refpersonRelationshipPlot
   })
   # PAGE 3 PLOTS: Disability Status#############################################
@@ -3205,14 +3342,14 @@ server <- function(input, output, session) {
   # Percent of Population by international migration subtopic 
   output$fourthPage_first_ADM1Plot <- renderPlot({
     req(r$fourthPage_focused_dataset, input$dropdown)
-
+    
     internal <- r$fourthPage_focused_dataset %>% 
       filter(Type != "LengthofStay")
-      
+    
     internal2 <-  internal['Metric'] %>%
       slice(2) %>%
       unlist(., use.names = FALSE)
-
+    
     if (internal2 == "ForeignBorn") {
       plotTitle <- "Percent of Population Foreign Born, Guatemala 2018"
     } else if (internal2 == "ForeignCitizenship") {
@@ -3220,7 +3357,7 @@ server <- function(input, output, session) {
     } else {
       plotTitle <- internal2
     }
-
+    
     a <- r$fourthPage_focused_dataset %>%
       filter(Level == "ADM1") %>%
       filter(Type == "ForeignRate") %>%
@@ -3283,7 +3420,7 @@ server <- function(input, output, session) {
       a
     }
   })
-
+  
   # Year of arrival in country   
   output$fourthPage_arrivalPlot <- renderPlot({
     req(dropdownFilteredData, input$dropdown)
@@ -3293,10 +3430,10 @@ server <- function(input, output, session) {
     } else {
       selectedLocation <- input$dropdown
     }
-
+    
     fourthPage_Arrival_Title <- sprintf(
       "%s,\n%s 2018",
-      i18n$t("Year of Arrival in Guatemela, Population Foreign Born"), selectedLocation) %>%
+      i18n$t("Year of Arrival in Guatemala, Population Foreign Born"), selectedLocation) %>%
       lapply(htmltools::HTML)
     
     arrivalPlot <- dropdownFilteredData() %>%
@@ -3312,12 +3449,12 @@ server <- function(input, output, session) {
     
     arrivalPlot
   })
-
+  
   # PAGE 5 PLOTS: Domestic Migration#######################################
   # Total migrants by domestic migration subtopic   
   output$fifthPage_national_ADM1Plot <- renderPlot({
     req(r$fifthPage_focused_dataset, input$dropdown)
-
+    
     internal <-  r$fifthPage_focused_dataset['Type'] %>%
       slice(2) %>%
       unlist(., use.names = FALSE)
@@ -3331,7 +3468,7 @@ server <- function(input, output, session) {
     } else {
       plotTitle <- internal
     }
-
+    
     a <- r$fifthPage_focused_dataset %>%
       ggplot(aes(x = reorder(ADM1, Value), y = Value/1000)) +
       geom_bar(fill = "#807CBA", stat = "identity", width = 0.8) +
@@ -3343,7 +3480,7 @@ server <- function(input, output, session) {
       theme_plot() +
       ggtitle(plotTitle) +
       coord_flip()
-  
+    
     if(input$dropdown != "All") {
       a <- a  + gghighlight(ADM1 == input$dropdown)
       a
@@ -3351,12 +3488,12 @@ server <- function(input, output, session) {
       a
     }
   })
-
+  
   # PAGE 6 PLOTS: Mortality#######################################
   # Crude death Rate by Department
   output$sixthPage_Deaths_ADM1Plot <- renderPlot({
     req(imported_data, input$dropdown)
-
+    
     a <- imported_data %>%
       filter(Level == "ADM1" & Metric == "CrudeDeathRate" & Type == "Total") %>%
       mutate(ADM1 = fct_reorder(ADM1, Value)) %>%
@@ -3423,7 +3560,7 @@ server <- function(input, output, session) {
       "%s, %s 2018",
       i18n$t("Deaths by Age Category"), selectedLocation) %>%
       lapply(htmltools::HTML)
-
+    
     deathPyramidPlot <- dropdownFilteredData() %>%
       dplyr::filter(Metric == "Deaths" & Type == "Age_Sex") %>%
       mutate(Population = ifelse(Sex == "Male", Value/100, -Value/100)) %>%
@@ -3452,7 +3589,7 @@ server <- function(input, output, session) {
     
     deathPyramidPlot
   })
-
+  
   # PAGE 7 PLOTS: Fertility#######################################
   # Crude birth Rate by Department      
   output$seventhPage_CBRate_ADM1Plot <- renderPlot({
@@ -3478,7 +3615,7 @@ server <- function(input, output, session) {
       a
     }
   })
-
+  
   # PAGE 8 PLOTS: Education#######################################
   # Literacy rate by education subtopic  
   output$eighthPage_LiteracyRate_ADM1Plot <- renderPlot({
@@ -3574,7 +3711,7 @@ server <- function(input, output, session) {
       ggplot(aes(
         y = Value/100000,
         x = Type)) +
-      geom_bar(stat = "identity", fill = "#dadaeb") +
+      geom_bar(stat = "identity", fill = "#bcbddc") +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       scale_x_discrete(labels = c("ISCED level 0: Less than primary education" = i18n$t("ISCED 0:\nLess than\nprimary"),
                                   "ISCED level 1: Primary education" = i18n$t("ISCED 1:\nPrimary"),
@@ -3594,7 +3731,7 @@ server <- function(input, output, session) {
     
     attainmentPlot
   })
-
+  
   # PAGE 9 PLOTS: Labour & Economy#######################################
   # Unemployment Rate by Department
   output$ninthPage_national_ADM1Plot <- renderPlot({
@@ -3613,12 +3750,12 @@ server <- function(input, output, session) {
       ggtitle(i18n$t("Unemployment Rate by Department, Guatemala 2018")) +
       coord_flip()
     
-      if(input$dropdown != "All") {
-        a <- a + gghighlight(ADM1 == input$dropdown)
-        a
-      } else {
-        a
-      }
+    if(input$dropdown != "All") {
+      a <- a + gghighlight(ADM1 == input$dropdown)
+      a
+    } else {
+      a
+    }
   })
   
   # Population by Labour Force Status
@@ -3753,7 +3890,7 @@ server <- function(input, output, session) {
       xlab("") +
       theme_plot() +
       coord_flip()
-     
+    
     
     occupationPlot
   })
@@ -3811,7 +3948,7 @@ server <- function(input, output, session) {
   # Participation in Own-Use Production of Goods by Departmen
   output$ninthPage_ParticipationOwnUseProductionofGoods <- renderPlot({
     req(input$dropdown, imported_data)
-
+    
     a <- imported_data %>%
       filter(Metric == "ParticipationOwnUseProduction" & Level == "ADM1") %>%
       mutate(ADM1 = fct_reorder(ADM1, Value)) %>%
@@ -3832,7 +3969,7 @@ server <- function(input, output, session) {
       a
     }
   })
-
+  
   # PAGE 10 PLOTS: Housing######################################################
   # Housing Unit Count by Department
   output$tenthPage_national_ADM1Plot <- renderPlot({
@@ -4107,12 +4244,12 @@ server <- function(input, output, session) {
       xlab("") +
       theme_plot() +
       scale_x_discrete(labels = c("Burnt clay (bricks, blocks, panels), stone, concrete" = i18n$t("Burnt clay (bricks,\nblocks, panels),\nstone, concrete"), 
-                                 "Unburnt clay, mud, earth" = i18n$t("Unburnt clay,\nmud, earth"),
-                                 "Wood" = i18n$t("Wood"), 
-                                 "Bamboo" = i18n$t("Bamboo"), 
-                                 "Corrugated sheets" = i18n$t("Corrugated sheets"), 
-                                 "Prefabricated units" = i18n$t("Prefabricated units"), 
-                                 "Other materials" = i18n$t("Other materials"))) +
+                                  "Unburnt clay, mud, earth" = i18n$t("Unburnt clay,\nmud, earth"),
+                                  "Wood" = i18n$t("Wood"), 
+                                  "Bamboo" = i18n$t("Bamboo"), 
+                                  "Corrugated sheets" = i18n$t("Corrugated sheets"), 
+                                  "Prefabricated units" = i18n$t("Prefabricated units"), 
+                                  "Other materials" = i18n$t("Other materials"))) +
       coord_flip()
     
     outerWallsPlot
@@ -4175,7 +4312,7 @@ server <- function(input, output, session) {
   # Percent of Living Quarters With More Than One Household by Department
   output$tenthPage_OccupancyDensityHH <- renderPlot({
     req(input$dropdown, imported_data)
-
+    
     a <- imported_data %>%
       filter(Metric == "OccupancyDensity" & Type == "PercMT1Households" & Level == "ADM1") %>%
       mutate(ADM1 = fct_reorder(ADM1, Value)) %>%
@@ -4218,7 +4355,7 @@ server <- function(input, output, session) {
       mutate(Type = fct_relevel(Type, "Other", "Piped water outside the unit, within 200 metres", "Piped water inside the unit")) %>%
       arrange(Type) %>%
       ggplot(aes(y = Value/1000000, x = Type)) +
-      geom_bar(stat = "identity", fill = "#dadaeb") +
+      geom_bar(stat = "identity", fill = "#bcbddc") +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       xlab("") +
       ylab(i18n$t("Housing Units (in millions)")) +
@@ -4289,7 +4426,7 @@ server <- function(input, output, session) {
       mutate(Type = fct_relevel(Type, "No toilet available", "Toilet outside housing unit", "Toilet within housing unit")) %>%
       arrange(Type) %>%
       ggplot(aes(y = Value/1000000, x = Type)) +
-      geom_bar(stat = "identity", fill = "#dadaeb") +
+      geom_bar(stat = "identity", fill = "#bcbddc") +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       xlab("") +
       ylab(i18n$t("Housing Units (in millions)")) +
@@ -4398,7 +4535,7 @@ server <- function(input, output, session) {
     BathingPlot <- dropdownFilteredData() %>%
       dplyr::filter(Metric == "BathingFacilities") %>%
       ggplot(aes(y = Value/1000000, x = reorder(Type, Value))) +
-      geom_bar(stat = "identity", fill = "#dadaeb") +
+      geom_bar(stat = "identity", fill = "#bcbddc") +
       scale_y_continuous(labels = label_number(accuracy = 0.1)) +
       xlab("") +
       ylab(i18n$t("Housing Units (in millions)")) +
@@ -4489,7 +4626,7 @@ server <- function(input, output, session) {
         count(MCommCoFu) %>%
         arrange(desc(n))
     }
-
+    
     if (input$dropdown == "All") {
       plotTitle <- i18n$t("Most Common Cooking Fuel by Department,\nGuatemala 2018")
     } else {
@@ -4498,7 +4635,7 @@ server <- function(input, output, session) {
         i18n$t("Most Common Cooking Fuel by Municipality"), input$dropdown) %>%
         lapply(htmltools::HTML)
     }
-
+    
     if (input$dropdown == "All") {
       plotXAxis <- i18n$t("1 square = 1 department")
     } else {
@@ -4532,7 +4669,7 @@ server <- function(input, output, session) {
                                         color = NA),
         legend.background = element_rect(fill = "transparent",
                                          color = NA),
-       # titles
+        # titles
         legend.title = element_blank(),
         legend.text = element_text(size = 10, 
                                    color = "black",
@@ -4563,12 +4700,12 @@ server <- function(input, output, session) {
       theme_plot() +
       coord_flip()
     
-      if(input$dropdown != "All") {
-        a <- a  + gghighlight(ADM1 == input$dropdown)
-        a
-      } else {
-        a
-      }
+    if(input$dropdown != "All") {
+      a <- a  + gghighlight(ADM1 == input$dropdown)
+      a
+    } else {
+      a
+    }
   })
   
   # Percent of Households with Internet Access by Department
@@ -4576,7 +4713,7 @@ server <- function(input, output, session) {
     req(input$dropdown, imported_data)
     
     plotTitle <- i18n$t("Percent of Households with Internet Access by Department")
-      
+    
     a <- imported_data %>%
       filter(Level == "ADM1" & Metric == "PercInternet") %>%
       ggplot(aes(x = reorder(ADM1, Value), y = Value)) +
@@ -4683,8 +4820,8 @@ server <- function(input, output, session) {
     
     ICTPlot
   })
-
-    
+  
+  
   #TRANSLATION##################################################################
   # The code below enables OSDS to translate from language to language with user 
   # selection from the dropdown menu in the header
@@ -4702,7 +4839,7 @@ server <- function(input, output, session) {
     newOptions <- purrr::map(lang_options, ~ list(key = .x$key, text = tr()$t(.x$text)))
     updateDropdown.shinyInput(session = session, inputId = "selected_language", options = newOptions)
   })
-
+  
   #DATA DOWNLOAD BY PAGE########################################################
   # The code below provides users with a data download on each page. These data
   # are used to build all visualizations. Thus, users can inspect the processed
@@ -4733,7 +4870,7 @@ server <- function(input, output, session) {
   
   page2_data <- imported_data %>% 
     filter(Metric %in% c("Housing Units","Household Size","HHTypes", "FamilyNucleus", "MaritalStatus", "RelationshipReferencePerson")) %>% 
-   dplyr::select(!c(Sex,Age,secondaryText))
+    dplyr::select(!c(Sex,Age,secondaryText))
   
   output$page2_ddb <- downloadHandler(
     filename = function() {
@@ -4780,7 +4917,7 @@ server <- function(input, output, session) {
       write.csv(page4_data, file, row.names=F)
     }
   )
-
+  
   # PAGE 5 DATA DOWNLOAD: Domestic Migration####################################
   observeEvent(input$page5_dd,
                click("page5_ddb"))
@@ -4801,16 +4938,16 @@ server <- function(input, output, session) {
   # PAGE 6 DATA DOWNLOAD: Mortality#############################################
   observeEvent(input$page6_dd,
                click("page6_ddb"))
-
+  
   page6_data <- imported_data %>% 
     filter(Metric %in% c("CrudeDeathRate","Deaths")) %>% 
     dplyr::select(!c(UrbanRural,secondaryText))
-
+  
   output$page6_ddb <- downloadHandler(
     filename = function() {
       'mortality-data.csv'
     },
-
+    
     content = function(file) {
       write.csv(page6_data, file, row.names=F)
     }
@@ -4874,7 +5011,7 @@ server <- function(input, output, session) {
   
   page10_data <- imported_data %>% 
     filter(Metric %in% c("LivingQuarters", "HousingUnits", "Occupancy", "Ownership", "Tenure", 
-                                                        "BuildingType1", "BuildingType2", "OuterWalls", "NumberofRooms", "OccupancyDensity")) %>% 
+                         "BuildingType1", "BuildingType2", "OuterWalls", "NumberofRooms", "OccupancyDensity")) %>% 
     dplyr::select(!c(Sex,UrbanRural,Age,secondaryText))   
   
   output$page10_ddb <- downloadHandler(
@@ -4893,7 +5030,7 @@ server <- function(input, output, session) {
   
   page11_data <- imported_data %>% 
     filter(Metric %in% c("WaterSystem", "DrinkingWater", "ToiletType", "SewageDisposal", "SolidWasteDisposal", 
-                                                        "BathingFacilities", "BathingFacilitiesExpanded1", "BathingFacilitiesExpanded2")) %>% 
+                         "BathingFacilities", "BathingFacilitiesExpanded1", "BathingFacilitiesExpanded2")) %>% 
     dplyr::select(!c(Sex,UrbanRural,Age,secondaryText))
   
   output$page11_ddb <- downloadHandler(
@@ -4923,7 +5060,8 @@ server <- function(input, output, session) {
       write.csv(page12_data, file, row.names=F)
     }
   )
-}
+  
+}  
 
 
 ################################################################################

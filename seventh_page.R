@@ -60,7 +60,7 @@ seventh_page_second_stack <- Stack(
       makeCard(" ",
                div(
                  plotOutput("seventhPage_CBRate_ADM1Plot")), # Crude birth rate
-               size = 6
+               size = 11
       )
     )
   )
